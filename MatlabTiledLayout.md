@@ -1,8 +1,6 @@
 Matlab Plotting with TiledLayout
 ================================
 
-$`\sqrt{2}`$
-
 Terminology Used
 ----------------
 (personal verbiage, not necessarily standard or exact)
