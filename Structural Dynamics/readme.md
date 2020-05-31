@@ -10,17 +10,23 @@ __Learning to evaluate the dynamics of a single and multiple degree of freedom s
 
 [Free Vibration](matlab/FVDsdof.m)
 
-Results: ![Free Vibration Results](output/FVDsdof.svg)
+### Results: 
+
+![Free Vibration Results](output/FVDsdof.svg)
 
 
 [Harmonic Loading](matlab/HL.m)
 
-Results: ![Harmonic Loading Results](output/HL.svg)
+### Results: 
+
+![Harmonic Loading Results](output/HL.svg)
 
 
 [Central Difference Method](matlab/CDMsdof.m)
 
-Results: ![Central Difference Method Results](output/CDMsdof.svg)
+### Results: 
+
+![Central Difference Method Results](output/CDMsdof.svg)
 
 
 ---
@@ -30,18 +36,26 @@ Results: ![Central Difference Method Results](output/CDMsdof.svg)
 
 [Free Vibration](matlab/FVDmdof.m)
 
-Results: ![Free VibrationResults](output/FVDmdof.svg)
+### Results: 
+
+![Free VibrationResults](output/FVDmdof.svg)
 
 [Central Difference Method](matlab/CDMmdof.m)
 
-Results: ![Central Difference Method Results](output/CDMmdof.svg)
+### Results: 
+
+![Central Difference Method Results](output/CDMmdof.svg)
 
 
 [Modal Analysis Nodal Loading](matlab/MAinput.m)
 
-Results: ![Modal Analysis Nodal Loading Results](output/MAinput.svg)
+### Results: 
+
+![Modal Analysis Nodal Loading Results](output/MAinput.svg)
 
 
 [Modal Analysis Earthquake Data](matlab/MAeqdata.m)
 
-Results: ![Modal Analysis Nodal Loading Results](output/MAeqdata.svg)
+### Results: 
+
+![Modal Analysis Nodal Loading Results](output/MAeqdata.svg)
