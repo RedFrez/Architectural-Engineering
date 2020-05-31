@@ -208,6 +208,6 @@ _Notice: if you look up documentation about latex it will show it with only one 
 
 
 ## Final Plot
-![Tiled Layout Matlab Resulting Plot](TLex.svg =800x)
+![Tiled Layout Matlab Resulting Plot](TLex.svg){:width="800px"}
 
 [File the produced plot](TLex.m)
