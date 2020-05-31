@@ -34,10 +34,10 @@ Defining the Container for the plots
  These numbers can be accessed by their position in the array, [1 2 3 4], by scrsz(#)
 
 When defining the figure position it uses this same structure for the four variables. Below it is setting:
-location start of x $\to$ 50% of scrsz width-x
-location start of y $\to$ 25% of scrsz width-y
-width in the x direction $\to$ 50% of scrsz width-x
-height in the y direction $\to$ 75% scrsz width-y
+location start of x &rarr; 50% of scrsz width-x
+location start of y &rarr; 25% of scrsz width-y
+width in the x direction &rarr; 50% of scrsz width-x
+height in the y direction &rarr; 75% scrsz width-y
 
 ```
 scrsz = get(groot, 'ScreenSize');
@@ -182,26 +182,26 @@ The first line is the name of the variable I used to hold the strings of data.
             - %f (fixed-point notation): I will use this when I want to limit how many places I want after the decimal point.
                 - ex: $\pi$
                     - %f will use matlab default setting
-                    - %.f $\to$ 3
-                    - %.2f $\to$ 3.14
-                    - %.25f $\to$ 3.1415926535897931159979635
+                    - %.f &rarr; 3
+                    - %.2f &rarr; 3.14
+                    - %.25f &rarr; 3.1415926535897931159979635
             - %e (exponential notation): works the same as %f for decimal places, but provides the e+00 at the end for large/small numbers
                 - ex: $\pi$
                     - %e will use matlab default setting
-                    - %.e $\to$ 3
-                    - %.2e $\to$ 3.14
-                    - %.25e $\to$ 3.1415926535897931159979635
+                    - %.e &rarr; 3
+                    - %.2e &rarr; 3.14
+                    - %.25e &rarr; 3.1415926535897931159979635
 
 
 - In order to use the formatting above it requires the program to interpret the output as latex. Using latex does provide additional options for symbols. The `$  $` surrounding the text is the delineation of the latex script. Below are some options that we use:
-    - `$\\zeta$` $\to$ $\zeta$
-    - `F$_s$` $\to$ F$_s$
-    - `$\\Delta$` $\to$ $\Delta$
-    - `$\\Delta t_{crit}$` $\to$ $\Delta t_{crit}$
-    - `$u_{max}$` $\to$ $u_{max}$
-    - `$\\mu$` $\to$ $\mu$
-    - `$\\bar{\\omega}$` $\to$ $\bar{\omega}$
-    - `$\\dot{\\omega}$` $\to$ $\dot{\omega}$
-    - `$\\ddot{\\omega}$` $\to$ $\ddot{\omega}$
+    - `$\\zeta$` &rarr; &zeta;
+    - `F$_s$` &rarr; F<sub>s</sub>
+    - `$\\Delta$` &rarr; &Delta;
+    - `$\\Delta t_{crit}$` &rarr; &Delta; t<sub>crit</sub>$
+    - `$u_{max}$` &rarr; u<sub>max</sub>$
+    - `$\\mu$` &rarr; &mu;
+    - `$\\bar{\\omega}$` &rarr; <img src="https://latex.codecogs.com/svg.latex?\fn_jvn&space;\large&space;\sf{\bar{\omega}}" title="\large \sf{\bar{\omega}}" />
+    - `$\\dot{\\omega}$` &rarr; <img src="https://latex.codecogs.com/svg.latex?\fn_jvn&space;\large&space;\sf{\dot{\omega}}" title="\large \sf{\dot{\omega}}" />
+    - `$\\ddot{\\omega}$` &rarr; <img src="https://latex.codecogs.com/svg.latex?\fn_jvn&space;\large&space;\sf{\ddot{\omega}}" title="\large \sf{\ddot{\omega}}" />
 
 _Notice: if you look up documentation about latex it will show it with only one slash `\` before the words, since matlab is reading it as code, it requires the second `\\` in order to tell it to read it as a slash._
