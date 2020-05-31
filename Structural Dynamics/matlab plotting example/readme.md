@@ -208,6 +208,6 @@ _Notice: if you look up documentation about latex it will show it with only one 
 
 
 ## Final Plot
-![Tiled Layout Matlab Resulting Plot](/Tl-ex.svg)
+![Tiled Layout Matlab Resulting Plot](Tlex.svg)
 
-[File the produced plot](/TL-ex.m)
+[File the produced plot](TLex.m)
