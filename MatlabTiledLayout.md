@@ -197,8 +197,8 @@ The first line is the name of the variable I used to hold the strings of data.
     - `$\\zeta$` &rarr; &zeta;
     - `F$_s$` &rarr; F<sub>s</sub>
     - `$\\Delta$` &rarr; &Delta;
-    - `$\\Delta t_{crit}$` &rarr; &Delta; t<sub>crit</sub>$
-    - `$u_{max}$` &rarr; u<sub>max</sub>$
+    - `$\\Delta t_{crit}$` &rarr; &Delta; t<sub>crit</sub>
+    - `$u_{max}$` &rarr; u<sub>max</sub>
     - `$\\mu$` &rarr; &mu;
     - `$\\bar{\\omega}$` &rarr; <img src="https://latex.codecogs.com/svg.latex?\fn_jvn&space;\large&space;\sf{\bar{\omega}}" title="\large \sf{\bar{\omega}}" />
     - `$\\dot{\\omega}$` &rarr; <img src="https://latex.codecogs.com/svg.latex?\fn_jvn&space;\large&space;\sf{\dot{\omega}}" title="\large \sf{\dot{\omega}}" />
