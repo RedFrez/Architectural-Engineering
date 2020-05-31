@@ -205,3 +205,9 @@ The first line is the name of the variable I used to hold the strings of data.
     - `$\\ddot{\\omega}$` &rarr; <img src="https://latex.codecogs.com/svg.latex?\fn_jvn&space;\large&space;\sf{\ddot{\omega}}" title="\large \sf{\ddot{\omega}}" />
 
 _Notice: if you look up documentation about latex it will show it with only one slash `\` before the words, since matlab is reading it as code, it requires the second `\\` in order to tell it to read it as a slash._
+
+
+## Final Plot
+![Tiled Layout Matlab Resulting Plot](Tl-ex.svg)
+
+[File the produced plot](TL-ex.m)
