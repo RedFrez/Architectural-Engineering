@@ -208,9 +208,7 @@ _Notice: if you look up documentation about latex it will show it with only one 
 
 
 ## Final Plot
+[File the produced plot](TLex.m)
+
 
 <a href='TLex.svg'><img src="TLex.svg" align="left" width="800" alt='final plot from tiled layout example'></a>
-
-<br>
-
-[File the produced plot](TLex.m)
