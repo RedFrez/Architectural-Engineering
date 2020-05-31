@@ -208,10 +208,7 @@ _Notice: if you look up documentation about latex it will show it with only one 
 
 
 ## Final Plot
-![Tiled Layout Matlab Resulting Plot](TLex.svg)
 
-
-<a src="TLex.svg"><img src="TL.svg" align="left" width="800" ></a>
-
+<a href='TLex.svg'><img src="TLex.svg" align="left" width="800" alt='final plot from tiled layout example'></a>
 
 [File the produced plot](TLex.m)
