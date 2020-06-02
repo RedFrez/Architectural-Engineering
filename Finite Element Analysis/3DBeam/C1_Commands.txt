@@ -1,0 +1,182 @@
+! clear the database and setup file information
+	/CLEAR
+
+! create job information
+    jobname = 'Case 1',
+    mininame = 'C1',
+	/CWD,'C:\Users\ANSYS\%mininame%'
+	/FILNAME, AE6210 Final Project %jobname%
+	/TITLE, AAE6210 Final Project %jobname%
+
+! define parameters
+    length = 360, ! fill in each case
+    load = 10, ! fill in each case
+    sixth_L = length/6,
+    half_L = length/2,
+    thickness = 20,
+    height = 40,
+    height_half = height/2,
+    bp_length = 30,
+    bp_half = bp_length/2,
+    surface_load = load/thickness,
+    bp_load = ((half_L)/bp_length)*surface_load,
+    ym = 700,
+    pr = 0.35,
+    density = 7.68E-05, !N/mm3
+    yield = 30,
+    mesh_offset = 10,
+    mesh_lg = 16,
+    mesh_sm = 8,
+! reverse video color
+	/RGB,INDEX,100,100,100,0,
+	/RGB,INDEX,80,80,80,13,
+	/RGB,INDEX,60,60,60,14,
+	/RGB,INDEX,0,0,0,15,
+! change amount of digits to display
+	/FORMAT,,,21,12,,,
+! Start Preprocessing Steps
+	/PREP7
+! define element types
+	ET,1,PLANE183,
+	KEYOPT,1,3,3, ! behavior to plane stress with thickness
+	R,1,thickness, ! define thickness of plate
+! set material properties for material 1
+	MP,EX,1,ym,	! Young's Modulus
+	MP,PRXY,1,pr, ! Poisson's ratio
+! create rectangle area and center hole
+	RECTNG,-bp_half,half_L,-height_half,height_half,
+! create keypoints for area divisions
+    K,,-bp_half,0,
+    K,,0,-height_half,
+    K,,0,height_half,
+    K,,bp_half,-height_half,
+    K,,bp_half,height_half,
+    K,,sixth_L,-height_half,
+    K,,sixth_L,height_half,
+    K,,half_L,0,
+! create lines between keypoints
+    L,KP(0,-height_half,0),KP(0,height_half,0),
+    L,KP(bp_half,-height_half,0),KP(bp_half,height_half,0),
+    L,KP(sixth_L,-height_half,0),KP(sixth_L,height_half,0),
+    L,KP(-bp_half,0,0),KP(half_L,0,0),
+! create keypoints/lines for mesh refinement areas
+    K,,half_L-mesh_offset,-height_half,
+    K,,half_L-mesh_offset,height_half,
+    L,KP(half_L-mesh_offset,-height_half,0),KP(half_L-mesh_offset,height_half,0),
+    K,,half_L-mesh_offset*2,-height_half,
+    K,,half_L-mesh_offset*2,height_half,
+    L,KP(half_L-mesh_offset*2,-height_half,0),KP(half_L-mesh_offset*2,height_half,0),
+    K,,sixth_L-mesh_offset,-height_half,
+    K,,sixth_L-mesh_offset,height_half,
+    L,KP(sixth_L-mesh_offset,-height_half,0),KP(sixth_L-mesh_offset,height_half,0),
+    K,,sixth_L+mesh_offset,-height_half,
+    K,,sixth_L+mesh_offset,height_half,
+    L,KP(sixth_L+mesh_offset,-height_half,0),KP(sixth_L+mesh_offset,height_half,0),
+    K,,sixth_L+mesh_offset*2,-height_half,
+    K,,sixth_L+mesh_offset*2,height_half,
+    L,KP(sixth_L+mesh_offset*2,-height_half,0),KP(sixth_L+mesh_offset*2,height_half,0),
+! divide area by all lines
+    ASBL,all,all,
+! create components for refinement areas
+    ASEL,S,LOC,X,sixth_L-mesh_offset,sixth_L+mesh_offset,
+    CM,Ct1Area,AREA,
+    ASEL,S,LOC,X,half_L-mesh_offset,half_L,
+    CM,Ct2Area,AREA,
+! select refinement areas for small meshing
+    ASEL,S,AREA,,Ct1Area,
+    ASEL,A,AREA,,Ct2Area,
+    AESIZE,all,mesh_sm,
+! meshing of areas
+    ASEL,INVE,
+    AESIZE,all,mesh_lg,
+! mesh all areas
+    ALLSEL,
+    MSHKEY,2,
+	AMESH,ALL,
+! create component for point Q (bottom point on cut 2)
+    NSEL,S,NODE,,NODE(half_L,-height_half,0),
+    CM,node_Q,NODE,
+    NSEL,ALL,
+! create component for bottom point on cut 1
+    NSEL,S,NODE,,NODE(sixth_L,-height_half,0),
+    CM,node_cut_1,NODE,
+    NSEL,ALL,
+! define DOF restraints
+    ! defines UY=0, for node at (0,0,0)
+        D,NODE(0,-height_half,0),UY,0,
+    ! select lines where location x = -e_left, set UX DOF to 0
+        LSEL,s,loc,x,half_L,
+		DL,ALL,,SYMM,
+! add surface loads
+    ! select correct lines at top of beam, minus end section, add surface load
+        LSEL,S,LOC,Y,height_half,
+        LSEL,U,LOC,X,-bp_half/2,
+        SFL,ALL,PRES,surface_load,
+    ! select bearing pad lines and apply surface pressure
+        LSEL,S,LOC,Y,-height_half,
+        LSEL,R,LOC,X,-bp_half,bp_half,
+        SFL,ALL,PRES,bp_load,
+! select everything
+	ALLSEL,
+! exit the preprocessor
+	FINISH
+! Start Solution processor
+	/SOLU
+! solve for Current LS
+	SOLVE
+! exit the solution processor
+	FINISH
+! Start Post Processing
+	/POST1
+! plot mesh (1)
+    EPLOT
+    /IMAGE,SAVE,STRCAT(mininame,'_mesh'),
+! ! plot displacement (2)
+    PLDISP,1
+    /IMAGE,SAVE,STRCAT(mininame,'_displacement'),
+! nodal solutions
+	CMLIST,,1,node,
+        ! manually copy or save file....
+    NSEL,S,NODE,,node_cut_1,
+    NSEL,A,NODE,,node_Q,
+    ! plot contour plot (3)
+        PLNSOL,s,x,0,1,
+        /IMAGE,SAVE,STRCAT(mininame,'_NSX'),
+    ! print vertical deflection of selected nodes (4)
+        PRNSOL,u,y,
+            ! manually copy or save file....
+! select everything
+    ALLSEL
+! plot bending stress along cut paths (5)
+    ! path will be lost when you leave POST1
+    ! generate path along cut 1
+        PATH,p_cut1,2,30,20, ! Create new path from 2 points w/ 30 points & 20 sets
+        PPATH,1,node(sixth_L,-height_half,0),,,0 ! 1st path point
+        PPATH,2,node(sixth_L,height_half,0),,,0 ! 2nd path point
+    ! calculate and print linearized stresses along a section path.
+        PRSECT,
+    ! define strain in x direction to path
+        PDEF,,S,x,
+    ! plot graph of x-strains at 8x scale with nodes in background
+        PLPAGM,SX,100,'NODE',
+        /DIST,,.3,1,
+		/FOCUS,,sixth_L,0,0,0,
+		/REPLOT
+        /IMAGE,SAVE,STRCAT(mininame,'_cut1_SX_plot'),
+    ! generate path along cut 2
+        PATH,p_cut2,2,30,20, ! Create new path from 2 points w/ 30 points & 20 sets
+        PPATH,1,node(half_L,-height_half,0),,,0 ! 1st path point
+        PPATH,2,node(half_L,height_half,0),,,0 ! 2nd path point
+    ! calculate and print linearized stresses along a section path.
+        PRSECT,
+    ! define strain in x direction to path
+        PDEF,,S,x,
+    ! plot graph of x-strains at 8x scale with nodes in background
+        PLPAGM,SX,100,'NODE',
+        /FOCUS,,half_L,0,0,0,
+		/REPLOT
+        /IMAGE,SAVE,STRCAT(mininame,'_cut2_SX_plot'),
+! end of ANSYS analysis
+
+! 30.1717 DMX - SMN = -30.1717 SMX = 3.95137
+!

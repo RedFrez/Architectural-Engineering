@@ -1,0 +1,132 @@
+! clear the database and setup file information
+	/CLEAR
+
+! create job information
+    jobname = 'Case 3',
+    mininame = 'C3',
+	/CWD,'C:\Users\ANSYS\%mininame%'
+	/FILNAME, AE6210 Final Project %jobname%
+	/TITLE, AAE6210 Final Project %jobname%
+
+! define parameters
+    length = 360, ! fill in each case
+    density = 7.68E-05 !N/mm3
+    sixth_L = length/6,
+    half_L = length/2,
+    thickness = 20,
+    height = 40,
+    height_half = height/2,
+    bp_length = 30,
+    bp_half = bp_length/2,
+    bp_load = (density*thickness*length*height)/2,
+    ym = 700,
+    pr = 0.35,
+    yield = 30,
+    mesh_size = 1,
+! reverse video color
+	/RGB,INDEX,100,100,100,0,
+	/RGB,INDEX,80,80,80,13,
+	/RGB,INDEX,60,60,60,14,
+	/RGB,INDEX,0,0,0,15,
+! change amount of digits to display
+	/FORMAT,,,21,12,,,
+! Start Preprocessing Steps
+	/PREP7
+! define element types
+	ET,1,PLANE183,
+	KEYOPT,1,3,3, ! behavior to plane stress with thickness
+	R,1,thickness, ! define thickness of plate
+! set material properties for material 1
+	MP,EX,1,ym,	! Young's Modulus
+	MP,PRXY,1,pr, ! Poisson's ratio
+    MP,DENS,1,density, ! add mass density (C3)
+! add gravity in y direction (C3)
+!   ACEL,0,9806.5,0,  ! mm/s^2
+! create rectangle area and center hole
+	RECTNG,-bp_half,half_L,-height_half,height_half,
+! create keypoints for area divisions
+    K,,-bp_half,0,
+    K,,0,-height_half,
+    K,,0,height_half,
+    K,,bp_half,-height_half,
+    K,,bp_half,height_half,
+    K,,sixth_L,-height_half,
+    K,,sixth_L,height_half,
+    K,,half_L,0,
+! create lines between keypoints
+    L,KP(0,-height_half,0),KP(0,height_half,0),
+    L,KP(bp_half,-height_half,0),KP(bp_half,height_half,0),
+    L,KP(sixth_L,-height_half,0),KP(sixth_L,height_half,0),
+    L,KP(-bp_half,0,0),KP(half_L,0,0),
+! mesh all areas
+    ALLSEL,
+    AESIZE,all,mesh_size,
+	AMESH,ALL,
+! create component for point Q (bottom point on cut 2)
+    NSEL,S,NODE,,NODE(half_L,-height_half,0),
+    CM,node_Q,NODE,
+    NSEL,ALL,
+! create component for bottom point on cut 1
+    NSEL,S,NODE,,NODE(sixth_L,-height_half,0),
+    CM,node_cut_1,NODE,
+    NSEL,ALL,
+! define DOF restraints
+    ! defines UX=0, UY=0, for node at (0,0,0)
+        D,NODE(0,-height_half,0),UY,0,
+    ! select lines where location x = -e_left, set UX DOF to 0
+        LSEL,s,loc,x,half_L,
+		DL,ALL,,SYMM,
+! add surface loads
+    ! select bearing pad lines and apply surface pressure
+        LSEL,S,LOC,Y,-height_half,
+        LSEL,R,LOC,X,-bp_half,bp_half,
+        SFL,ALL,PRES,bp_load,
+! select everything
+	ALLSEL,
+! exit the preprocessor
+	FINISH
+! Start Solution processor
+	/SOLU
+! solve for Current LS
+    ANTYPE,MODAL,NEW,
+    MODOPT,LANB,4,
+    MXPAND,4,
+	SOLVE
+! exit the solution processor
+	FINISH
+! Start Post Processing
+	/POST1
+! plot first displacement
+    SET,FIRST,
+    PLDISP,1,
+    /IMAGE,save,STRCAT(mininame,'_set1'),
+! plot second displacement
+    SET,NEXT,
+    PLDISP,1,
+    /IMAGE,save,STRCAT(mininame,'_set2'),
+! plot third displacement
+    SET,NEXT,
+    PLDISP,1,
+    /IMAGE,save,STRCAT(mininame,'_set3'),
+! plot fourth step
+    SET,NEXT,
+    PLDISP,1,
+    /IMAGE,save,STRCAT(mininame,'_set4'),
+! end of ANSYS analysis
+
+
+
+! just used for mesh analysis
+! EPLOT
+! /IMAGE,save,STRCAT(mininame,'_mesh'),
+! SET,FIRST,
+! PLDISP,1
+
+! read set - mode one .410718 htz dmx = 1.8878 dmx=.42188?
+! read set - step 2 - 3.0657
+! step 3 - 3.8674
+
+! step 4 - 5.98276 freq
+! dmx = 2.97706
+
+! table to provide (or snip pictures of frequencies)

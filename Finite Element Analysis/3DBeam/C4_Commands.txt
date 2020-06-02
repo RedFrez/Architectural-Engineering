@@ -1,0 +1,247 @@
+! clear the database and setup file information
+	/CLEAR
+! create job information
+    jobname = 'Case 4',
+    mininame = 'C4',
+	/CWD,'C:\Users\ANSYS\%mininame%'
+	/FILNAME, AE6210 Final Project %jobname%
+	/TITLE, AAE6210 Final Project %jobname%
+! define parameters
+    length = 480, ! fill in each case
+    load_1 = 5+5/9, ! stress @ 30
+    load_2 = 7.5, ! stress @ 40.5
+    load_3 = 0, ! unloaded
+    sixth_L = length/6,
+    half_L = length/2,
+    thickness = 20,
+    height = 40,
+    height_half = height/2,
+    bp_length = 30,
+    bp_half = bp_length/2,
+    ym = 700
+    pr = 0.35
+    density = 7.68E-05 !N/mm3
+    yield = 30
+    mesh_offset = 10,
+    mesh_lg = 8,
+    mesh_sm = 4,
+    tm = 36+16/19, ! tangent modulus
+! reverse video color
+	/RGB,INDEX,100,100,100,0,
+	/RGB,INDEX,80,80,80,13,
+	/RGB,INDEX,60,60,60,14,
+	/RGB,INDEX,0,0,0,15,
+! change amount of digits to display
+	/FORMAT,,,21,12,,,
+! Start Preprocessing Steps
+	/PREP7
+! define element types
+	ET,1,PLANE183,
+	KEYOPT,1,3,3, ! behavior to plane stress with thickness
+	R,1,thickness, ! define thickness of plate
+! set material properties for material 1
+	MP,EX,1,ym,	! Young's Modulus
+	MP,PRXY,1,pr, ! Poisson's ratio
+! set
+    TB,BKIN,1,1,2,1
+    TBTEMP,0
+    TBDATA,,30,tm,,,,
+! create rectangle area and center hole
+	RECTNG,-bp_half,half_L,-height_half,height_half,
+! create keypoints for area divisions
+    K,,-bp_half,0,
+    K,,0,-height_half,
+    K,,0,height_half,
+    K,,bp_half,-height_half,
+    K,,bp_half,height_half,
+    K,,sixth_L,-height_half,
+    K,,sixth_L,height_half,
+    K,,half_L,0,
+! create lines between keypoints
+    L,KP(0,-height_half,0),KP(0,height_half,0),
+    L,KP(bp_half,-height_half,0),KP(bp_half,height_half,0),
+    L,KP(sixth_L,-height_half,0),KP(sixth_L,height_half,0),
+    L,KP(-bp_half,0,0),KP(half_L,0,0),
+! create keypoints/lines for mesh refinement areas
+    K,,half_L-mesh_offset,-height_half,
+    K,,half_L-mesh_offset,height_half,
+    L,KP(half_L-mesh_offset,-height_half,0),KP(half_L-mesh_offset,height_half,0),
+    K,,half_L-mesh_offset*2,-height_half,
+    K,,half_L-mesh_offset*2,height_half,
+    L,KP(half_L-mesh_offset*2,-height_half,0),KP(half_L-mesh_offset*2,height_half,0),
+    K,,sixth_L-mesh_offset,-height_half,
+    K,,sixth_L-mesh_offset,height_half,
+    L,KP(sixth_L-mesh_offset,-height_half,0),KP(sixth_L-mesh_offset,height_half,0),
+    K,,sixth_L+mesh_offset,-height_half,
+    K,,sixth_L+mesh_offset,height_half,
+    L,KP(sixth_L+mesh_offset,-height_half,0),KP(sixth_L+mesh_offset,height_half,0),
+    K,,sixth_L+mesh_offset*2,-height_half,
+    K,,sixth_L+mesh_offset*2,height_half,
+    L,KP(sixth_L+mesh_offset*2,-height_half,0),KP(sixth_L+mesh_offset*2,height_half,0),
+! divide area by all lines
+    ASBL,all,all,
+! create components for refinement areas
+    ASEL,S,LOC,X,sixth_L-mesh_offset,sixth_L+mesh_offset,
+    CM,Ct1Area,AREA,
+    ASEL,S,LOC,X,half_L-mesh_offset,half_L,
+    CM,Ct2Area,AREA,
+! select refinement areas for small meshing
+    ASEL,S,AREA,,Ct1Area,
+    ASEL,A,AREA,,Ct2Area,
+    AESIZE,all,mesh_sm,
+! meshing of areas
+    ASEL,INVE,
+    AESIZE,all,mesh_lg,
+! mesh all areas
+    ALLSEL,
+    MSHKEY,2,
+	AMESH,ALL,
+! create component for point Q (bottom point on cut 2)
+    NSEL,S,NODE,,NODE(half_L,-height_half,0),
+    CM,node_Q,NODE,
+    NSEL,ALL,
+! create component for the top point on cut 2
+    NSEL,S,NODE,,NODE(half_L,height_half,0),
+    CM,node_C2T,NODE,
+    NSEL,ALL,
+! create component for bottom point on cut 1
+    NSEL,S,NODE,,NODE(sixth_L,-height_half,0),
+    CM,node_cut_1,NODE,
+    NSEL,ALL,
+! create component group for cut 2 nodes
+    CMGRP,Nds_C2,node_Q,node_C2T,
+! define DOF restraints
+    ! defines UY=0, for node at center of the top of the bearing pad
+        D,NODE(0,-height_half,0),UY,0,
+    ! select lines where location x = -e_left, set UX DOF to 0
+        LSEL,s,loc,x,half_L,
+		DL,ALL,,UX,0
+! define components for surface loads
+    ! select correct lines at top of beam, minus end section
+        LSEL,S,LOC,Y,height_half,
+        LSEL,U,LOC,X,-bp_half/2,
+        CM,Beam_w,LINE
+    ! select bearing pad lines
+        LSEL,S,LOC,Y,-height_half,
+        LSEL,R,LOC,X,-bp_half,bp_half,
+        CM,bp_w,LINE,
+ALLSEL
+! exit the preprocessor
+	FINISH
+! Start Solution processor
+	/SOLU
+! create new analysis that will be static
+    ANTYPE,0,
+! set convergence type, tolerence, reference value
+    ! structural force, tol=.001, refval=.01,
+        CNVTOL,F,,0.001,,0.01,
+    ! structural displacements, tol=.001, L2 norm selection, refval=0,
+        CNVTOL,U,,0.001,2,0,
+! setup loadstep 1
+    ! define loads
+        load = load_1
+        surface_load = load/thickness,
+        bp_load = ((half_L)/bp_length)*surface_load
+    ! specify only one substep, max#=0,min#=0
+        NSUBST,1,0,0
+    ! write all items to the database with a frequency of 1
+        OUTRES,ALL,.5,
+    ! turn off automatic time stepping
+        AUTOTS,OFF,
+    ! set terminate if no convergence, DOF disp limit=0, cumulative iteration = 0, elapsed time limit=0,cpu time limit = 0,
+        NCNV,2,0,0,0,0,
+    ! max of 25 equilibrium iterations
+        NEQIT,25,
+    ! time set to match load
+        TIME,1,
+    ! apply loads
+        SFL,Beam_w,PRES,surface_load,
+        SFL,bp_w,PRES,bp_load,
+    ! write load step to file
+        LSWRITE,1,
+
+! setup loadstep 2
+    ! define loads
+        load = load_2
+        surface_load = load/thickness,
+        bp_load = ((half_L)/bp_length)*surface_load
+    ! specify substeps=10, max#=50,min#=2
+        NSUBST,10,50,2
+    ! turn on automatic time stepping
+        AUTOTS,ON,
+    ! time set to match load
+        TIME,40.5,
+    ! delete loads
+        SFLDELE,Beam_w,PRES,
+        SFLDELE,bp_w,PRES,
+    ! apply loads
+        SFL,Beam_w,PRES,surface_load,
+        SFL,bp_w,PRES,bp_load,
+    ! write load step to file
+        LSWRITE,2,
+
+! setup loadstep 3
+    ! define loads
+        surface_load = load_3,
+        bp_load = load_3,
+
+    ! time set to match double load 2
+        TIME,100,
+    ! delete loads
+        SFLDELE,Beam_w,PRES,
+        SFLDELE,bp_w,PRES,
+    ! apply loads
+        SFL,Beam_w,PRES,surface_load,
+        SFL,bp_w,PRES,bp_load,
+    ! write load step to file
+        LSWRITE,3,
+! solve for load steps from 1 to 3 in increments of 1
+    LSSOLVE,1,3,1,
+! exit the solution processor
+    FINISH
+! start Post Processing
+    /POST1
+! plot mesh (1)
+    EPLOT
+    /IMAGE,SAVE,STRCAT(mininame,'_mesh'),
+! plot displacement (2)
+    SET,2,6,1,
+    PLDISP,1
+    /IMAGE,SAVE,STRCAT(mininame,'_displacement'),
+! nodal solutions
+	CMLIST,,1,node,
+    NSEL,S,NODE,,node_cut_1,
+    NSEL,A,NODE,,node_Q,
+! plot plastic strain of x (3)
+    PLNSOL, EPPL,X, 2,1.0
+    /IMAGE,SAVE,STRCAT(mininame,'_ex'),
+ALLSEL
+
+
+
+! generate path along cut 2
+    PATH,p_cut2,2,30,20, ! Create new path from 2 points w/ 30 points & 20 sets
+    PPATH,1,node(half_L,-height_half,0),,,0 ! 1st path point
+    PPATH,2,node(half_L,height_half,0),,,0 ! 2nd path point
+! define total strain in x direction to path
+    PDEF,,EPTO,x,
+    PDEF,,EPPL,x,
+! plot graph of total strain at 100 scale with nodes in background
+    PLPAGM,EPTOX,100,'NODE',
+    /DIST,,.25,1,
+    /FOCUS,,half_L,0,0,0,
+    /REPLOT
+    ! Query Results -> Subrid Solu -> Strain-total -> X-dir'n EPTO -> OK -> Pick top and bottom points with mouse
+    ! /IMAGE,SAVE,STRCAT(mininame,'_cut2_EPTOx_plot'),
+! plot graph of plstic strain at 100 scale with nodes in background
+    PLPAGM,EPPLX,100,'NODE',
+    ! Query Results -> Subrid Solu -> Strain-plastic -> X-dir'n EPPL -> OK -> Pick top and bottom points with mouse
+    ! /IMAGE,SAVE,STRCAT(mininame,'_cut2_EPPLx_plot'),
+
+
+
+
+! end of ANSYS analysis
+
+
+!C4 - step 2 sub 6 time 40 dmx= 78.310

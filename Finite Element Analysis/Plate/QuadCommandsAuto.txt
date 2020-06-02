@@ -1,0 +1,241 @@
+! Commands for Quarter Model with Auto Meshing
+! clear the database and setup file information
+	/CLEAR
+	/CWD,'C:\Users\ANSYS\QuadPlateAuto'
+	/FILNAME, AE6210 Assignment 5 Quad
+	/TITLE, AE6210 Assignment 5 Quad
+! define parameters
+	E_length = 14,
+	E_width = 2,
+	E_left = 5.5,
+	E_right = 8.5,
+	E_thickness = .25,
+	E_ym = 10100,
+	E_pr = 0.33,
+	C_diameter = .75,
+	SG1y = 1,
+	SG2y = .8790,
+	SG3y = .6270,
+	SG4y = .4730,
+	SG5y = .3750,
+	SG6x = .8750,
+	SG7x = 1.6250,
+	SG8x = 2.3750,
+	P_force = 2000,
+	T_stress = p_force/(E_width*E_thickness),
+	mesh_arc = .125,
+	mesh_sm = .25,
+	mesh_med = .5,
+	mesh_lg = 1,
+! reverse video color
+	/RGB,INDEX,100,100,100,0,
+	/RGB,INDEX,80,80,80,13,
+	/RGB,INDEX,60,60,60,14,
+	/RGB,INDEX,0,0,0,15,
+! change amount of digits to display
+	/FORMAT,,,21,12,,,
+! Start Preprocessing Steps
+	/PREP7
+! define element types
+	ET, 1, plane183,
+	KEYOPT,1,1,1, ! change to triagle meshing
+	KEYOPT,1,3,3, ! behavior to plane stress with thickness
+	R,1,E_thickness, ! define thickness of plate
+! set material properties for material 1
+	MP,EX,1,E_ym,	! Young's Modulus
+	MP,PRXY,1,E_pr, ! Poisson's ratio
+! create keypoints to create exterior of 1/4 plate
+	K,1,0,0,
+	K,2,0,C_diameter/2,
+	K,3,0,E_width/2,
+	K,4,E_right,E_width/2,
+	K,5,E_right,0,
+	K,6,C_diameter/2,0,
+! add lines and arc to create the shape
+	L,2,3,
+	L,3,4,
+	L,4,5,
+	L,5,6,
+	LARC,6,2,1,C_diameter/2,
+! turn on numbering and plot lines
+	/PNUM,line,1
+	LPLOT
+! generates an area bounded by selected (all) lines
+	AL,all,
+! create keypoints for the strain gauges
+	K,11,0,SG1y,
+	K,12,0,SG2y,
+	K,13,0,SG3y,
+	K,14,0,SG4y,
+	K,15,0,SG5y,
+	K,16,SG6x,0,
+	K,17,SG7x,0,
+	K,18,SG8x,0,
+	K,19,SG8x*1.5,0,
+! create second set of lines at the end of the plate
+	K,21,E_right,SG1y,
+	K,22,E_right,SG2y,
+	K,23,E_right,SG3y,
+	K,24,E_right,SG4y,
+	K,25,E_right,SG5y,
+	K,26,SG6x,E_width/2,
+	K,27,SG7x,E_width/2,
+	K,28,SG8x,E_width/2,
+	K,29,SG8x*1.5,E_width/2,
+! create lines connecting the nodes
+	L,11,21,
+	L,12,22,
+	L,13,23,
+	L,14,24,
+	L,15,25,
+	L,16,26,
+	L,17,27,
+	L,18,28,
+	L,19,29,
+! turn on numbers of nodes and plot lines
+	/PNUM,NODE,1,
+	LPLOT
+! select the vertical lines, 11-14
+	LSEL,S,LINE,,11,14,
+! divide area 1 by all selected lines
+	ASBL,1,all,
+! select the horizontal lines, 7-10
+	LSEL,S,LINE,,7,10,
+! subdivide area 6 by all selected lines
+	ASBL,6,all,
+! select all lines, turn on area numbering and plot areas
+	LSEL,ALL
+	/PNUM,area,1,
+	APLOT
+! define max element size for area 2
+	AESIZE,2,mesh_lg,
+! select areas for medium meshing
+	ASEL,S,AREA,,3,5,
+! set size of meshing for selected areas
+	AESIZE,ALL,mesh_med,
+! select areas for small meshing
+	ASEL,S,AREA,,9,10,
+	ASEL,A,AREA,,7,
+! set size of meshing for selected areas
+	AESIZE,ALL,mesh_sm,
+! size the areas around the arc for smaller meshing
+	AESIZE,1,mesh_arc,
+	AESIZE,8,mesh_arc,
+! select all areas
+	ASEL,ALL
+! mesh all areas
+	AMESH,all,
+! change element shape checking to just create a warning instead of canceling meshing
+	SHPP,WARN
+! refine all the areas by 1
+	AREFINE,all,,,1,,,
+! select areas for further refinement, and refine by 1
+	ASEL,S,AREA,,3,4,
+	ASEL,A,AREA,,1,
+	ASEL,A,AREA,,7,10,
+	AREFINE,all,,,1,
+! select everything
+	ALLSEL,
+! create a component group with the 1-5 strain gauges
+	NSEL,s,node,,node(0,SG1Y,0), ! select node at SG1 location
+	CM,SG1,node, ! create component with selecte node named SG1
+	NSEL,all, ! select all nodes
+	NSEL,s,node,,node(0,SG2Y,0),
+	CM,SG2,node,
+	NSEL,all,
+	NSEL,s,node,,node(0,SG3Y,0),
+	CM,SG3,node,
+	NSEL,all,
+	NSEL,s,node,,node(0,SG4Y,0),
+	CM,SG4,node,
+	NSEL,all,
+	NSEL,s,node,,node(0,SG5Y,0),
+	CM,SG5,node,
+	NSEL,all,
+	CMGRP,SG1_5,SG1,SG2,SG3,SG4,SG5, ! group all components SG1-SG5
+! create a component group to have all strain gages
+	NSEL,s,node,,node(SG6X,0,0),
+	CM,SG6,node,
+	NSEL,all,
+	NSEL,s,node,,node(SG7X,0,0),
+	CM,SG7,node,
+	NSEL,all,
+	NSEL,s,node,,node(SG8X,0,0),
+	CM,SG8,node,
+	ALLSEL,
+	CMGRP,SGALL,SG1,SG2,SG3,SG4,SG5,SG6,SG7,SG8,
+! turn off nodes, plot elements, and save as a bitmap image
+	/PNUM,node,0,
+	EPLOT
+	/IMAGE,save,A5_Q_N_E_MESH
+! define DOF restraints
+	! select lines where location x = 0, set UX DOF to 0
+		LSEL,s,loc,x,0
+		DL,all,,ux,0,
+	! select lines where location y = 0, set UX DOF to symmetric
+		LSEL,s,loc,y,0
+		DL,all,,symm,
+! select all lines and plot lines
+	LSEL,all,
+	LPLOT,
+! select all lines with location of x=e_right
+	LSEL,s,loc,x,E_right,
+	! add surface load of pressure to line right side
+		SFL,all,PRES,-T_stress,
+ ! select everything
+	ALLSEL,
+! exit the preprocessor
+	FINISH
+! Start Solution processor
+	/SOLU
+! solve for Current LS
+	SOLVE,
+! exit the solution processor
+	FINISH
+! Start Post Processing
+	/POST1
+! define where output data should be saved
+	/OUTPUT,Q_data,txt,,append
+! lists all node components defined, and expanded to see the nodes they include
+	CMLIST,,1,node,
+	! manually click file -> copy to output -> X
+! select all nodes in the component group SGALL
+	NSEL,s,node,,SGALL,
+	PRNSOL,s,comp, ! print nodal solution of selected node stresses
+	! manually click file -> copy to output -> X
+! turn off node numbering and then plot nodal solutions for stress in x-direction
+	/PNUM,node,0,
+	PLNSOL,S,X,0,
+	/IMAGE,save,A5_Q_N_SX,
+	! zoom in on display to get a closer view to see strain gages
+		/DIST,,.25,1,
+		/FOCUS,,0,0,0,0,
+		/PNUM,node,1,
+		/REPLOT
+		! shift plot over to the left by two clicks
+		! manually select nodes to show on plot
+		! General Postproc -> Query Results -> Subgrid Solution
+		! Stress, X-direction
+		! Pick -> (pick all correct nodes for strain gauge locations 6-8) -> OK
+		/IMAGE,save,A5_Q_N_SX_zoom,
+! Plot element solution with node numbering turned off
+	/pnum,node,0,
+	PLESOL,S,X,0,
+	! click fit view
+	/IMAGE,save,A5_Q_E_SX,
+! ensure everything is selected
+	ALLSEL
+! generate path from SG1 location to SG5
+	! path will be lost when you leave POST1
+	PATH,full_top,2,30,20, ! Create new path from 2 points w/ 30 points & 20 sets
+	PPATH,1,0,0,SG1Y,0,0, ! 1st path point
+	PPATH,2,0,0,SG5Y,0,0, ! 2nd path point
+! define strain in x direction to path
+	PDEF,,S,x,
+! plot graph of x-strains at 8x scale with nodes in background
+	PLPAGM,SX,8,'NODE',
+	! manually select nodes to show on plot
+	! General Postproc -> Query Results -> Subgrid Solution
+	! Stress, X-direction
+	! Pick -> (pick all correct nodes for strain gauge locations) -> OK
+	/IMAGE,save,A5_Q_CUT_SX,

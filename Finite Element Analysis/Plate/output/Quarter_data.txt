@@ -1,0 +1,2824 @@
+ 
+ LIST SELECTED COMPONENTS
+ ENTITY TYPE = NODE
+ 
+    NAME                            TYPE      SUBCOMPONENTS
+ 
+  SG1                               NODE
+                                          260 
+  SG2                               NODE
+                                          261 
+  SG3                               NODE
+                                          328 
+  SG4                               NODE
+                                          292 
+  SG5                               NODE
+                                          16  
+  SG6                               NODE
+                                          2   
+  SG7                               NODE
+                                          140 
+  SG8                               NODE
+                                          195 
+
+          8  NODES (OF       4639  DEFINED) SELECTED BY  NSEL  COMMAND.
+ 
+ PRINT S    NODAL SOLUTION PER NODE
+ 
+  ***** POST1 NODAL STRESS LISTING *****                                       
+  PowerGraphics Is Currently Enabled                                           
+ 
+  LOAD STEP=     1  SUBSTEP=     1                                             
+   TIME=    1.0000      LOAD CASE=   0                                         
+  NODAL RESULTS ARE FOR MATERIAL   1                                           
+ 
+  THE FOLLOWING X,Y,Z VALUES ARE IN GLOBAL COORDINATES                         
+ 
+    NODE     SX           SY           SZ           SXY          SYZ          SXZ     
+       2   2359.6       290.55       0.0000      -1.1798       0.0000       0.0000     
+      16   14566.       3.8754       0.0000      -26.664       0.0000       0.0000     
+     140   3666.2       301.53       0.0000     -0.12105       0.0000       0.0000     
+     195   3958.4       84.271       0.0000     -0.31501E-001  0.0000       0.0000     
+     260   3266.2      -1.7838       0.0000      -4.7399       0.0000       0.0000     
+     261   4393.3       182.42       0.0000      0.60083       0.0000       0.0000     
+     292   8877.5       1529.6       0.0000     -0.14155       0.0000       0.0000     
+     328   6144.9       1154.1       0.0000       1.4725       0.0000       0.0000     
+ 
+ MINIMUM VALUES
+ NODE          2          260            2           16            2            2
+ VALUE    2359.6      -1.7838       0.0000      -26.664       0.0000       0.0000     
+ 
+ MAXIMUM VALUES
+ NODE         16          292            2          328            2            2
+ VALUE    14566.       1529.6       0.0000       1.4725       0.0000       0.0000     
+
+ Use Full element graphics for all elements
+
+ EXIT THE ANSYS POST1 DATABASE PROCESSOR
+
+
+ ***** ROUTINE COMPLETED *****  CP =         6.938
+
+
+
+ *** NOTE ***                            CP =       6.938   TIME= 13:55:28
+ A total of 5 warnings and errors written to                             
+ C:\Users\Christina\file.err.                                            
+
+ CLEAR DATABASE AND RERUN START.ANS
+
+ RUN SETUP PROCEDURE FROM FILE= C:\Program Files\ANSYS Inc\ANSYS Student\v192\ANSYS\apdl\start.ans
+
+ ANSYS Academic Teaching Introductory              
+
+ /INPUT FILE= C:\Program Files\ANSYS Inc\ANSYS Student\v192\ANSYS\apdl\start.ans  LINE=       0
+
+
+ ***** ROUTINE COMPLETED *****  CP =         7.000
+
+
+
+ *** NOTE ***                            CP =       7.000   TIME= 13:55:28
+ A total of 5 warnings and errors written to                             
+ C:\Users\Christina\file.err.                                            
+  Database cleared for a fresh start
+
+ Current working directory switched to C:\Users\Christina\Box\1-W18-AE6210-Applied Finite Elements\Assignments\A5                                                                                                                                                                              
+
+ CURRENT JOBNAME REDEFINED AS AE6210Assignment5Full
+
+ TITLE= 
+  AE6210 Assignment 5 Full                                                     
+
+
+ PARAMETER E_LENGTH =     14.00000000    
+
+ PARAMETER E_WIDTH =     2.000000000    
+
+ PARAMETER E_LEFT =     5.500000000    
+
+ PARAMETER E_RIGHT =     8.500000000    
+
+ PARAMETER E_THICKNESS =    0.2500000000    
+
+ PARAMETER E_YM =     10100.00000    
+
+ PARAMETER E_PR =    0.3300000000    
+
+ PARAMETER C_DIAMETER =    0.7500000000    
+
+ PARAMETER SG1Y =     1.000000000    
+
+ PARAMETER SG2Y =    0.8790000000    
+
+ PARAMETER SG3Y =    0.6270000000    
+
+ PARAMETER SG4Y =    0.4730000000    
+
+ PARAMETER SG5Y =    0.3750000000    
+
+ PARAMETER SG6X =    0.8750000000    
+
+ PARAMETER SG7X =     1.625000000    
+
+ PARAMETER SG8X =     2.375000000    
+
+ PARAMETER P_FORCE =     2000.000000    
+
+ PARAMETER T_STRESS =     4000.000000    
+
+ PARAMETER MESH_ARC =    0.1250000000    
+
+ PARAMETER MESH_SM =    0.2500000000    
+
+ PARAMETER MESH_MED =    0.5000000000    
+
+ PARAMETER MESH_LG =     1.000000000    
+  reverse video color
+
+ RED=100% GREEN=100% BLUE=100%
+  for color index  0.
+
+ RED=80% GREEN=80% BLUE=80%
+  for color index 13.
+
+ RED=60% GREEN=60% BLUE=60%
+  for color index 14.
+
+ RED=0% GREEN=0% BLUE=0%
+  for color index 15.
+  Start Preprocessing Steps
+
+          ***** ANSYS ANALYSIS DEFINITION (PREP7) *****
+
+ ENTER  /SHOW,DEVICE-NAME  TO ENABLE GRAPHIC DISPLAY
+ ENTER  FINISH             TO LEAVE PREP7
+ PRINTOUT KEY SET TO /GOPR (USE /NOPR TO SUPPRESS)
+
+ ELEMENT TYPE       1 IS PLANE183     2-D 8-NODE PLANE STRS SOLID 
+  KEYOPT( 1- 6)=        0      0      0        0      0      0
+  KEYOPT( 7-12)=        0      0      0        0      0      0
+  KEYOPT(13-18)=        0      0      0        0      0      0
+
+ CURRENT NODAL DOF SET IS  UX    UY  
+  TWO-DIMENSIONAL MODEL
+
+ ELEMENT TYPE       1 IS PLANE183     2-D 6-NODE PLANE STRS SOLID 
+  KEYOPT( 1- 6)=        1      0      0        0      0      0
+  KEYOPT( 7-12)=        0      0      0        0      0      0
+  KEYOPT(13-18)=        0      0      0        0      0      0
+
+ CURRENT NODAL DOF SET IS  UX    UY  
+  TWO-DIMENSIONAL MODEL
+
+ ELEMENT TYPE       1 IS PLANE183     2-D 6-NODE PLANE STRS SOLID 
+  KEYOPT( 1- 6)=        1      0      3        0      0      0
+  KEYOPT( 7-12)=        0      0      0        0      0      0
+  KEYOPT(13-18)=        0      0      0        0      0      0
+
+ CURRENT NODAL DOF SET IS  UX    UY  
+  TWO-DIMENSIONAL MODEL
+
+ REAL CONSTANT SET          1  ITEMS   1 TO   6
+   0.25000       0.0000       0.0000       0.0000       0.0000       0.0000    
+
+ MATERIAL          1     EX   =   10100.00      
+
+ MATERIAL          1     PRXY =  0.3300000      
+
+ CREATE A PLANAR RECTANGULAR AREA WITH
+ X-DISTANCES FROM     -5.500000000     TO      8.500000000    
+ Y-DISTANCES FROM     -1.000000000     TO      1.000000000    
+
+      OUTPUT AREA =     1
+
+ PLOT AREAS FROM     1  TO     1  BY      1
+
+ CREATE A CIRCULAR AREA WITH
+ INNER RADIUS         =      0.000000000    
+ OUTER RADIUS         =     0.3750000000    
+ STARTING THETA ANGLE =      0.000000000    
+ ENDING   THETA ANGLE =      360.0000000    
+      OUTPUT AREA =     2
+
+ SUBTRACT AREAS
+
+      AREA NUMBERS TO BE OPERATED ON =       1
+      AREAS OPERATED ON WILL BE DELETED IF POSSIBLE
+      AREA NUMBERS TO BE SUBTRACTED  =       2
+      AREAS SUBTRACTED WILL BE DELETED IF POSSIBLE
+      OUTPUT AREAS =     3
+
+ KEYPOINT     10   X,Y,Z=   0.00000       0.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     11   X,Y,Z=   0.00000       1.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     30   X,Y,Z=   8.50000       0.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     31   X,Y,Z=  -5.50000       0.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     12   X,Y,Z=  -5.50000       1.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     13   X,Y,Z=   8.50000       1.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     14   X,Y,Z=  -5.50000      0.879000       0.00000      IN CSYS=  0
+
+ KEYPOINT     15   X,Y,Z=   8.50000      0.879000       0.00000      IN CSYS=  0
+
+ KEYPOINT     16   X,Y,Z=  -5.50000      0.627000       0.00000      IN CSYS=  0
+
+ KEYPOINT     17   X,Y,Z=   8.50000      0.627000       0.00000      IN CSYS=  0
+
+ KEYPOINT     18   X,Y,Z=  -5.50000      0.473000       0.00000      IN CSYS=  0
+
+ KEYPOINT     19   X,Y,Z=   8.50000      0.473000       0.00000      IN CSYS=  0
+
+ KEYPOINT     20   X,Y,Z=  -5.50000      0.375000       0.00000      IN CSYS=  0
+
+ KEYPOINT     21   X,Y,Z=   8.50000      0.375000       0.00000      IN CSYS=  0
+
+ KEYPOINT     22   X,Y,Z=  0.875000      -1.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     23   X,Y,Z=  0.875000       1.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     24   X,Y,Z=   1.62500      -1.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     25   X,Y,Z=   1.62500       1.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     26   X,Y,Z=   2.37500      -1.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     27   X,Y,Z=   2.37500       1.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     28   X,Y,Z=   3.56250      -1.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     29   X,Y,Z=   3.56250       1.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     32   X,Y,Z= -0.875000      -1.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     33   X,Y,Z= -0.875000       1.00000       0.00000      IN CSYS=  0
+
+ LINE CONNECTS KEYPOINTS     10    11
+  LINE NO.=     9  KP1=     10  TAN1=    0.0000  -1.0000   0.0000
+                   KP2=     11  TAN2=    0.0000   1.0000   0.0000
+
+ LINE CONNECTS KEYPOINTS     30    31
+  LINE NO.=    10  KP1=     30  TAN1=    1.0000   0.0000   0.0000
+                   KP2=     31  TAN2=   -1.0000   0.0000   0.0000
+
+ LINE CONNECTS KEYPOINTS     12    13
+  LINE NO.=    11  KP1=     12  TAN1=   -1.0000   0.0000   0.0000
+                   KP2=     13  TAN2=    1.0000   0.0000   0.0000
+
+ LINE CONNECTS KEYPOINTS     14    15
+  LINE NO.=    12  KP1=     14  TAN1=   -1.0000   0.0000   0.0000
+                   KP2=     15  TAN2=    1.0000   0.0000   0.0000
+
+ LINE CONNECTS KEYPOINTS     16    17
+  LINE NO.=    13  KP1=     16  TAN1=   -1.0000   0.0000   0.0000
+                   KP2=     17  TAN2=    1.0000   0.0000   0.0000
+
+ LINE CONNECTS KEYPOINTS     18    19
+  LINE NO.=    14  KP1=     18  TAN1=   -1.0000   0.0000   0.0000
+                   KP2=     19  TAN2=    1.0000   0.0000   0.0000
+
+ LINE CONNECTS KEYPOINTS     20    21
+  LINE NO.=    15  KP1=     20  TAN1=   -1.0000   0.0000   0.0000
+                   KP2=     21  TAN2=    1.0000   0.0000   0.0000
+
+ LINE CONNECTS KEYPOINTS     22    23
+  LINE NO.=    16  KP1=     22  TAN1=    0.0000  -1.0000   0.0000
+                   KP2=     23  TAN2=    0.0000   1.0000   0.0000
+
+ LINE CONNECTS KEYPOINTS     24    25
+  LINE NO.=    17  KP1=     24  TAN1=    0.0000  -1.0000   0.0000
+                   KP2=     25  TAN2=    0.0000   1.0000   0.0000
+
+ LINE CONNECTS KEYPOINTS     26    27
+  LINE NO.=    18  KP1=     26  TAN1=    0.0000  -1.0000   0.0000
+                   KP2=     27  TAN2=    0.0000   1.0000   0.0000
+
+ LINE CONNECTS KEYPOINTS     28    29
+  LINE NO.=    19  KP1=     28  TAN1=    0.0000  -1.0000   0.0000
+                   KP2=     29  TAN2=    0.0000   1.0000   0.0000
+
+ LINE CONNECTS KEYPOINTS     32    33
+  LINE NO.=    20  KP1=     32  TAN1=    0.0000  -1.0000   0.0000
+                   KP2=     33  TAN2=    0.0000   1.0000   0.0000
+
+ NODE NUMBERING KEY =  1
+
+ LINE NUMBERING KEY =  1
+
+ AREA NUMBERING KEY =  1
+
+ PLOT LINES FROM     1  TO    20  BY    1
+
+ SELECT       FOR ITEM=LINE COMPONENT=    
+  IN RANGE        16 TO         20 STEP          1
+
+        5  LINES (OF       20  DEFINED) SELECTED BY LSEL  COMMAND.
+
+ ALSO SELECT  FOR ITEM=LINE COMPONENT=    
+  IN RANGE        10 TO         10 STEP          1
+
+        6  LINES (OF       20  DEFINED) SELECTED BY LSEL COMMAND.
+
+ SUBTRACT A LINE FROM AN AREA
+      AREA NUMBERS TO BE OPERATED ON =       3
+      AREAS OPERATED ON WILL BE DELETED IF POSSIBLE
+      LINE NUMBERS TO BE SUBTRACTED  =      10     16     17     18     19
+      LINE NUMBERS TO BE SUBTRACTED  =      20
+      LINES SUBTRACTED WILL BE DELETED IF POSSIBLE
+      OUTPUT AREAS =     1    2    4    5    6    7    8    9   10   11
+      OUTPUT AREAS =    12   13
+
+ SELECT       FOR ITEM=LINE COMPONENT=    
+  IN RANGE        11 TO         15 STEP          1
+
+        5  LINES (OF       43  DEFINED) SELECTED BY LSEL  COMMAND.
+
+ SUBTRACT A LINE FROM AN AREA
+      AREA NUMBERS TO BE OPERATED ON =      12
+      AREAS OPERATED ON WILL BE DELETED IF POSSIBLE
+      LINE NUMBERS TO BE SUBTRACTED  =      11     12     13     14     15
+      LINES SUBTRACTED WILL BE DELETED IF POSSIBLE
+      OUTPUT AREAS =     3   14   15   16   17   18
+
+ PLOT LINES FROM     1  TO    58  BY    1
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ PLOT AREAS FROM     1  TO    18  BY      1
+
+ SELECT       FOR ITEM=AREA COMPONENT=    
+  IN RANGE         1 TO          2 STEP          1
+
+        2  AREAS (OF       17  DEFINED) SELECTED BY  ASEL  COMMAND.
+
+ ALSO SELECT  FOR ITEM=AREA COMPONENT=    
+  IN RANGE         4 TO          5 STEP          1
+
+        4  AREAS (OF       17  DEFINED) SELECTED BY ASEL  COMMAND.
+
+ AT ALL SELECTED AREAS,
+    SET DESIRED ELEMENT EDGE LENGTH TO  1.0000    
+
+ SELECT       FOR ITEM=AREA COMPONENT=    
+  IN RANGE         6 TO         11 STEP          1
+
+        6  AREAS (OF       17  DEFINED) SELECTED BY  ASEL  COMMAND.
+
+ ALSO SELECT  FOR ITEM=AREA COMPONENT=    
+  IN RANGE        13 TO         13 STEP          1
+
+        7  AREAS (OF       17  DEFINED) SELECTED BY ASEL  COMMAND.
+
+ AT ALL SELECTED AREAS,
+    SET DESIRED ELEMENT EDGE LENGTH TO 0.50000    
+
+ SELECT       FOR ITEM=AREA COMPONENT=    
+  IN RANGE        15 TO         17 STEP          1
+
+        3  AREAS (OF       17  DEFINED) SELECTED BY  ASEL  COMMAND.
+
+ AT ALL SELECTED AREAS,
+    SET DESIRED ELEMENT EDGE LENGTH TO 0.25000    
+
+ ALL SELECT   FOR ITEM=AREA COMPONENT=    
+  IN RANGE         1 TO         18 STEP          1
+
+       17  AREAS (OF       17  DEFINED) SELECTED BY ASEL COMMAND.
+
+ AT AREA     3,
+    SET DESIRED ELEMENT EDGE LENGTH TO 0.12500    
+
+ AT AREA    14,
+    SET DESIRED ELEMENT EDGE LENGTH TO 0.12500    
+
+ AT AREA    18,
+    SET DESIRED ELEMENT EDGE LENGTH TO 0.12500    
+ USE THE MAPPED MESHER IF THE ENTITY CAN BE MAP MESHED OTHERWISE USE THE FREE MESHER.
+
+ GENERATE NODES AND ELEMENTS   IN  ALL  SELECTED AREAS    
+                                                                         
+ ** Meshing of area 1 in progress **                                     
+    ** AREA     1 MESHED WITH       0 QUADRILATERALS,       20 TRIANGLES **
+ ** Meshing of area 1 completed ** 20 elements.                          
+                                                                         
+ ** Meshing of area 2 in progress **                                     
+    ** AREA     2 MESHED WITH       0 QUADRILATERALS,       20 TRIANGLES **
+ ** Meshing of area 2 completed ** 20 elements.                          
+                                                                         
+ ** Meshing of area 3 in progress **                                     
+    ** AREA     3 MESHED WITH       0 QUADRILATERALS,       70 TRIANGLES **
+ ** Meshing of area 3 completed ** 70 elements.                          
+                                                                         
+ ** Meshing of area 4 in progress **                                     
+    ** AREA     4 MESHED WITH       0 QUADRILATERALS,       20 TRIANGLES **
+ ** Meshing of area 4 completed ** 20 elements.                          
+                                                                         
+ ** Meshing of area 5 in progress **                                     
+    ** AREA     5 MESHED WITH        0 QUADRILATERALS,       33 TRIANGLES **
+ ** Meshing of area 5 completed ** 33 elements.                          
+                                                                         
+ ** Meshing of area 6 in progress **                                     
+    ** AREA     6 MESHED WITH       0 QUADRILATERALS,        8 TRIANGLES **
+ ** Meshing of area 6 completed ** 8 elements.                           
+                                                                         
+ ** Meshing of area 7 in progress **                                     
+    ** AREA     7 MESHED WITH        0 QUADRILATERALS,       28 TRIANGLES **
+ ** Meshing of area 7 completed ** 28 elements.                          
+                                                                         
+ ** Meshing of area 8 in progress **                                     
+    ** AREA     8 MESHED WITH       0 QUADRILATERALS,        8 TRIANGLES **
+ ** Meshing of area 8 completed ** 8 elements.                           
+                                                                         
+ ** Meshing of area 9 in progress **                                     
+    ** AREA     9 MESHED WITH       0 QUADRILATERALS,        8 TRIANGLES **
+ ** Meshing of area 9 completed ** 8 elements.                           
+                                                                         
+ ** Meshing of area 10 in progress **                                    
+    ** AREA    10 MESHED WITH       0 QUADRILATERALS,       12 TRIANGLES **
+ ** Meshing of area 10 completed ** 12 elements.                         
+                                                                         
+ ** Meshing of area 11 in progress **                                    
+    ** AREA    11 MESHED WITH       0 QUADRILATERALS,       12 TRIANGLES **
+ ** Meshing of area 11 completed ** 12 elements.                         
+                                                                         
+ ** Meshing of area 13 in progress **                                    
+    ** AREA    13 MESHED WITH        0 QUADRILATERALS,       44 TRIANGLES **
+ ** Meshing of area 13 completed ** 44 elements.                         
+                                                                         
+ ** Meshing of area 14 in progress **                                    
+    ** AREA    14 MESHED WITH       0 QUADRILATERALS,       70 TRIANGLES **
+ ** Meshing of area 14 completed ** 70 elements.                         
+                                                                         
+ ** Meshing of area 15 in progress **                                    
+    ** AREA    15 MESHED WITH       0 QUADRILATERALS,       28 TRIANGLES **
+ ** Meshing of area 15 completed ** 28 elements.                         
+                                                                         
+ ** Meshing of area 16 in progress **                                    
+    ** AREA    16 MESHED WITH       0 QUADRILATERALS,       56 TRIANGLES **
+ ** Meshing of area 16 completed ** 56 elements.                         
+                                                                         
+ ** Meshing of area 17 in progress **                                    
+    ** AREA    17 MESHED WITH       0 QUADRILATERALS,       28 TRIANGLES **
+ ** Meshing of area 17 completed ** 28 elements.                         
+                                                                         
+ ** Meshing of area 18 in progress **                                    
+    ** AREA    18 MESHED WITH        0 QUADRILATERALS,       32 TRIANGLES **
+ ** Meshing of area 18 completed ** 32 elements.                         
+
+ NUMBER OF AREAS MESHED     =         17
+ MAXIMUM NODE NUMBER        =       1067
+ MAXIMUM ELEMENT NUMBER     =        497
+
+ ------------------------------------------------------------------------------
+            <<<<<<          SHAPE TESTING SUMMARY           >>>>>>
+            <<<<<<       FOR NEW OR MODIFIED ELEMENTS       >>>>>>
+ ------------------------------------------------------------------------------
+                    --------------------------------------
+                    |  Element count       497 PLANE183  |
+                    --------------------------------------
+
+  Test                Number tested  Warning count  Error count    Warn+Err %
+  ----                -------------  -------------  -----------    ----------
+  Aspect Ratio                497              0             0         0.00 %
+  Maximum Angle               497              0             0         0.00 %
+  Jacobian Ratio              497              2             0         0.40 %
+
+  Any                         497              2             0         0.40 %
+ ------------------------------------------------------------------------------
+
+ *** WARNING ***                         CP =       8.453   TIME= 13:55:30
+ Shape testing revealed that 2 of the 497 new or modified elements       
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ PRODUCE ELEMENT PLOT IN DSYS =   0
+
+ SWITCH ERROR MESSAGES FOR ELEMENT SHAPE LIMIT VIOLATIONS TO WARNINGS
+
+   REFINE ELEMENTS   ON  ALL  SELECTED AREAS    
+
+ Additional Nodes    =    3043
+ Additional Elements =    1485
+
+ ------------------------------------------------------------------------------
+            <<<<<<          SHAPE TESTING SUMMARY           >>>>>>
+            <<<<<<       FOR NEW OR MODIFIED ELEMENTS       >>>>>>
+ ------------------------------------------------------------------------------
+                    --------------------------------------
+                    |  Element count      1982 PLANE183  |
+                    --------------------------------------
+
+  Test                Number tested  Warning count  Error count    Warn+Err %
+  ----                -------------  -------------  -----------    ----------
+  Aspect Ratio               1982              0             0         0.00 %
+  Maximum Angle              1982              0             0         0.00 %
+  Jacobian Ratio             1982              2             0         0.10 %
+
+  Any                        1982              2             0         0.10 %
+ ------------------------------------------------------------------------------
+
+ *** WARNING ***                         CP =       8.656   TIME= 13:55:30
+ Shape testing revealed that 2 of the 1982 new or modified elements      
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ PRODUCE ELEMENT PLOT IN DSYS =   0
+
+ SELECT       FOR ITEM=AREA COMPONENT=    
+  IN RANGE         6 TO         13 STEP          1
+
+        7  AREAS (OF       17  DEFINED) SELECTED BY  ASEL  COMMAND.
+
+ ALSO SELECT  FOR ITEM=AREA COMPONENT=    
+  IN RANGE         3 TO          3 STEP          1
+
+        8  AREAS (OF       17  DEFINED) SELECTED BY ASEL  COMMAND.
+
+   REFINE ELEMENTS   ON  ALL  SELECTED AREAS    
+
+ Additional Nodes    =    5818
+ Additional Elements =    2876
+
+ ------------------------------------------------------------------------------
+            <<<<<<          SHAPE TESTING SUMMARY           >>>>>>
+            <<<<<<       FOR NEW OR MODIFIED ELEMENTS       >>>>>>
+ ------------------------------------------------------------------------------
+                    --------------------------------------
+                    |  Element count      4858 PLANE183  |
+                    --------------------------------------
+
+  Test                Number tested  Warning count  Error count    Warn+Err %
+  ----                -------------  -------------  -----------    ----------
+  Aspect Ratio               4858              4             0         0.08 %
+  Maximum Angle              4858              0             0         0.00 %
+  Jacobian Ratio             4858              2             0         0.04 %
+
+  Any                        4858              4             0         0.08 %
+ ------------------------------------------------------------------------------
+
+ *** WARNING ***                         CP =       9.266   TIME= 13:55:31
+ Shape testing revealed that 4 of the 4858 new or modified elements      
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ PRODUCE ELEMENT PLOT IN DSYS =   0
+
+ ALL SELECT   FOR ITEM=AREA COMPONENT=    
+  IN RANGE         1 TO         18 STEP          1
+
+       17  AREAS (OF       17  DEFINED) SELECTED BY ASEL COMMAND.
+
+ SELECT       FOR ITEM=NODE COMPONENT=    
+  IN RANGE      1840 TO       1840 STEP          1
+
+          1  NODES (OF       9928  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ DEFINITION OF COMPONENT = SG1       ENTITY=NODE
+
+ ALL SELECT   FOR ITEM=NODE COMPONENT=    
+  IN RANGE         1 TO       9928 STEP          1
+
+       9928  NODES (OF       9928  DEFINED) SELECTED BY NSEL  COMMAND.
+
+ SELECT       FOR ITEM=NODE COMPONENT=    
+  IN RANGE      1528 TO       1528 STEP          1
+
+          1  NODES (OF       9928  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ DEFINITION OF COMPONENT = SG2       ENTITY=NODE
+
+ ALL SELECT   FOR ITEM=NODE COMPONENT=    
+  IN RANGE         1 TO       9928 STEP          1
+
+       9928  NODES (OF       9928  DEFINED) SELECTED BY NSEL  COMMAND.
+
+ SELECT       FOR ITEM=NODE COMPONENT=    
+  IN RANGE      1334 TO       1334 STEP          1
+
+          1  NODES (OF       9928  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ DEFINITION OF COMPONENT = SG3       ENTITY=NODE
+
+ ALL SELECT   FOR ITEM=NODE COMPONENT=    
+  IN RANGE         1 TO       9928 STEP          1
+
+       9928  NODES (OF       9928  DEFINED) SELECTED BY NSEL  COMMAND.
+
+ SELECT       FOR ITEM=NODE COMPONENT=    
+  IN RANGE      1111 TO       1111 STEP          1
+
+          1  NODES (OF       9928  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ DEFINITION OF COMPONENT = SG4       ENTITY=NODE
+
+ ALL SELECT   FOR ITEM=NODE COMPONENT=    
+  IN RANGE         1 TO       9928 STEP          1
+
+       9928  NODES (OF       9928  DEFINED) SELECTED BY NSEL  COMMAND.
+
+ SELECT       FOR ITEM=NODE COMPONENT=    
+  IN RANGE       112 TO        112 STEP          1
+
+          1  NODES (OF       9928  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ DEFINITION OF COMPONENT = SG5       ENTITY=NODE
+
+ ALL SELECT   FOR ITEM=NODE COMPONENT=    
+  IN RANGE         1 TO       9928 STEP          1
+
+       9928  NODES (OF       9928  DEFINED) SELECTED BY NSEL  COMMAND.
+
+ DEFINITION OF COMPONENT = SG1_5                           
+ SUB-COMPONENTS=SG1                             SG2                             
+ SUB-COMPONENTS=SG3                             SG4                             
+ SUB-COMPONENTS=SG5                             
+
+ SELECT       FOR ITEM=NODE COMPONENT=    
+  IN RANGE       122 TO        122 STEP          1
+
+          1  NODES (OF       9928  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ DEFINITION OF COMPONENT = SG6       ENTITY=NODE
+
+ ALL SELECT   FOR ITEM=NODE COMPONENT=    
+  IN RANGE         1 TO       9928 STEP          1
+
+       9928  NODES (OF       9928  DEFINED) SELECTED BY NSEL  COMMAND.
+
+ SELECT       FOR ITEM=NODE COMPONENT=    
+  IN RANGE       402 TO        402 STEP          1
+
+          1  NODES (OF       9928  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ DEFINITION OF COMPONENT = SG7       ENTITY=NODE
+
+ ALL SELECT   FOR ITEM=NODE COMPONENT=    
+  IN RANGE         1 TO       9928 STEP          1
+
+       9928  NODES (OF       9928  DEFINED) SELECTED BY NSEL  COMMAND.
+
+ SELECT       FOR ITEM=NODE COMPONENT=    
+  IN RANGE       483 TO        483 STEP          1
+
+          1  NODES (OF       9928  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ DEFINITION OF COMPONENT = SG8       ENTITY=NODE
+
+ ALL SELECT   FOR ITEM=NODE COMPONENT=    
+  IN RANGE         1 TO       9928 STEP          1
+
+       9928  NODES (OF       9928  DEFINED) SELECTED BY NSEL  COMMAND.
+
+ DEFINITION OF COMPONENT = SGALL                           
+ SUB-COMPONENTS=SG1                             SG2                             
+ SUB-COMPONENTS=SG3                             SG4                             
+ SUB-COMPONENTS=SG5                             SG6                             
+ SUB-COMPONENTS=SG7                             SG8                             
+
+ NODE NUMBERING KEY =  0
+
+ PRODUCE ELEMENT PLOT IN DSYS =   0
+
+ Save Graphics image to file A5_F_E_MESH.eps                                                                                                                                                                                                                                                     
+
+ ALL SELECT   FOR ITEM=AREA COMPONENT=    
+  IN RANGE         1 TO         18 STEP          1
+
+       17  AREAS (OF       17  DEFINED) SELECTED BY ASEL COMMAND.
+
+ SELECT       FOR ITEM=LOC  COMPONENT=X     BETWEEN -5.5000     AND  -5.5000    
+   KABS=  0.  TOLERANCE= 0.275000E-01
+
+        2  LINES (OF       51  DEFINED) SELECTED BY LSEL  COMMAND.
+
+ CONSTRAINT AT ALL SELECTED LINES
+      LOAD LABELS = UX  
+      VALUES =      0.0000         0.0000    
+
+ ALL BOUNDARY CONDITION DISPLAY KEYS SET TO  1
+
+ SELECT       FOR ITEM=LOC  COMPONENT=X     BETWEEN -5.5000     AND  -5.5000    
+   KABS=  0.  TOLERANCE= 0.275000E-01
+
+         13  NODES (OF       9928  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ RESELECT     FOR ITEM=LOC  COMPONENT=Y     BETWEEN  0.0000     AND   0.0000    
+   KABS=  0.  TOLERANCE= 0.100000E-05
+
+          1  NODES (OF       9928  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES            1 TO        9928 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+ ADDITIONAL DOFS=  UY  
+
+ *** WARNING ***                         CP =      11.266   TIME= 13:55:32
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+
+ SELECT       FOR ITEM=LOC  COMPONENT=X     BETWEEN  8.5000     AND   8.5000    
+   KABS=  0.  TOLERANCE= 0.425000E-01
+
+         17  NODES (OF       9928  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ RESELECT     FOR ITEM=LOC  COMPONENT=Y     BETWEEN  0.0000     AND   0.0000    
+   KABS=  0.  TOLERANCE= 0.100000E-05
+
+          1  NODES (OF       9928  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES            1 TO        9928 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ ALL SELECT   FOR ITEM=LINE COMPONENT=    
+  IN RANGE         1 TO         58 STEP          1
+
+       51  LINES (OF       51  DEFINED) SELECTED BY LSEL COMMAND.
+
+ SELECT       FOR ITEM=LOC  COMPONENT=X     BETWEEN  8.5000     AND   8.5000    
+   KABS=  0.  TOLERANCE= 0.425000E-01
+
+        2  LINES (OF       51  DEFINED) SELECTED BY LSEL  COMMAND.
+
+ SURFACE LOAD ON ALL SELECTED LINES 
+     LOAD LABEL = PRES
+     VALI,  VALJ  =         -4000.0             -4000.0    
+
+ PRES LOAD SURFACE DISPLAY KEY =  1
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+
+ ***** ROUTINE COMPLETED *****  CP =        11.672
+
+
+
+ *** NOTE ***                            CP =      11.672   TIME= 13:55:32
+ A total of 9 warnings and errors written to                             
+ C:\Users\Christina\file.err.                                            
+  Start Solution Steps
+
+ *****  ANSYS SOLUTION ROUTINE  *****
+
+ *****  ANSYS SOLVE    COMMAND  *****
+
+ TRANSFER SOLID MODEL BOUNDARY CONDITIONS TO FINITE ELEMENT MODEL
+      CONSTRAINTS    TRANSFERRED FROM LINES         =     14
+      SURFACE LOADS  TRANSFERRED FROM LINES         =      8
+
+ *** WARNING ***                         CP =      11.781   TIME= 13:55:32
+ Element shape errors, if any, are currently shown as warnings only.     
+ Issue SHPP,ON to restore shape error traps, if desired.                 
+
+ *** WARNING ***                         CP =      11.781   TIME= 13:55:32
+ Previous testing revealed that 4 of the 4858 selected elements violate  
+ shape warning limits.  To review warning messages, please see the       
+ output or error file, or issue the CHECK command.                       
+
+ *** NOTE ***                            CP =      11.797   TIME= 13:55:32
+ The model data was checked and warning messages were found.             
+  Please review output or errors file ( C:\Users\Christina\file.err )    
+ for these warning messages.                                             
+
+ *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
+                ---GIVE SUGGESTIONS ONLY---
+
+ ELEMENT TYPE    1 IS PLANE183 WITH PLANE STRESS OPTION. NO SUGGESTION IS
+ AVAILABLE.
+
+
+
+                       S O L U T I O N   O P T I O N S
+
+   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .2-D                  
+   DEGREES OF FREEDOM. . . . . . UX   UY  
+   ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
+   GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
+
+ *** NOTE ***                            CP =      11.797   TIME= 13:55:32
+ Present time 0 is less than or equal to the previous time.  Time will   
+ default to 1.                                                           
+
+ *** NOTE ***                            CP =      11.797   TIME= 13:55:32
+ The conditions for direct assembly have been met.  No .emat or .erot    
+ files will be produced.                                                 
+
+                      L O A D   S T E P   O P T I O N S
+
+   LOAD STEP NUMBER. . . . . . . . . . . . . . . .     1
+   TIME AT END OF THE LOAD STEP. . . . . . . . . .  1.0000    
+   NUMBER OF SUBSTEPS. . . . . . . . . . . . . . .     1
+   STEP CHANGE BOUNDARY CONDITIONS . . . . . . . .    NO
+   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT
+   DATABASE OUTPUT CONTROLS. . . . . . . . . . . .ALL DATA WRITTEN
+                                                  FOR THE LAST SUBSTEP
+
+
+ SOLUTION MONITORING INFO IS WRITTEN TO FILE= AE6210Assignment5Full.mntr                                                                                                                                                                                                                                          
+
+ Element Formation Element= 1000 Cum.  Iter.= 1 CP= 12.000               
+  Time= 1.0000 Load Step= 1 Substep= 1 Equilibrium Iteration= 1.         
+
+ Range of element maximum matrix coefficients in global coordinates
+ Maximum = 266773.036 at element 4706.                                   
+ Minimum = 4369.30053 at element 75.                                     
+
+   *** ELEMENT MATRIX FORMULATION TIMES
+     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
+
+        1      4858  PLANE183      0.250   0.000051
+ Time at end of element matrix formulation CP = 12.09375.                
+
+ SPARSE MATRIX DIRECT SOLVER.
+  Number of equations =       19841,    Maximum wavefront =     44
+  Memory allocated for solver              =    24.917 MB
+  Memory required for in-core solution     =    24.011 MB
+  Memory required for out-of-core solution =    12.174 MB
+
+ *** NOTE ***                            CP =      12.281   TIME= 13:55:32
+ The Sparse Matrix Solver is currently running in the in-core memory     
+ mode.  This memory mode uses the most amount of memory in order to      
+ avoid using the hard drive as much as possible, which most often        
+ results in the fastest solution time.  This mode is recommended if      
+ enough physical memory is present to accommodate all of the solver      
+ data.                                                                   
+ curEqn=  19841  totEqn=  19841 Job CP sec=     12.344
+      Factor Done= 100% Factor Wall sec=      0.000 rate=       0.0 Mflops
+ Sparse solver maximum pivot= 266716.465 at node 651 UY.                 
+ Sparse solver minimum pivot= 53.2936572 at node 7109 UY.                
+ Sparse solver minimum pivot in absolute value= 53.2936572 at node 7109  
+ UY.                                                                     
+
+   *** ELEMENT RESULT CALCULATION TIMES
+     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
+
+        1      4858  PLANE183      0.312   0.000064
+
+   *** NODAL LOAD CALCULATION TIMES
+     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
+
+        1      4858  PLANE183      0.000   0.000000
+ *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
+ *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
+
+ *** NOTE ***                            CP =      12.672   TIME= 13:55:33
+ Solution is done!                                                       
+
+
+ *** ANSYS BINARY FILE STATISTICS
+  BUFFER SIZE USED= 16384
+        3.812 MB WRITTEN ON ASSEMBLED MATRIX FILE: AE6210Assignment5Full.full
+        4.562 MB WRITTEN ON RESULTS FILE: AE6210Assignment5Full.rst
+
+ FINISH SOLUTION PROCESSING
+
+
+ ***** ROUTINE COMPLETED *****  CP =        12.906
+
+
+
+ *** NOTE ***                            CP =      12.906   TIME= 13:55:33
+ A total of 11 warnings and errors written to                            
+ C:\Users\Christina\file.err.                                            
+  Start Post Processing Steps
+
+          ***** ANSYS RESULTS INTERPRETATION (POST1) *****
+
+ ENTER  /SHOW,DEVICE-NAME  TO ENABLE GRAPHIC DISPLAY
+ ENTER  FINISH             TO LEAVE POST1
+
+ /OUTPUT FILE= F_data.txt
+  manually click file -> copy to output -> X
+
+          8  NODES (OF       4639  DEFINED) SELECTED BY  NSEL  COMMAND.
+  manually click file -> co
+ 
+ PRINT S    NODAL SOLUTION PER NODE
+ 
+  ***** POST1 NODAL STRESS LISTING *****                                       
+  PowerGraphics Is Currently Enabled                                           
+ 
+  LOAD STEP=     1  SUBSTEP=     1                                             
+   TIME=    1.0000      LOAD CASE=   0                                         
+  NODAL RESULTS ARE FOR MATERIAL   1                                           
+ 
+  THE FOLLOWING X,Y,Z VALUES ARE IN GLOBAL COORDINATES                         
+ 
+    NODE     SX           SY           SZ           SXY          SYZ          SXZ     
+       2   2359.6       290.55       0.0000      -1.1798       0.0000       0.0000     
+      16   14566.       3.8754       0.0000      -26.664       0.0000       0.0000     
+     140   3666.2       301.53       0.0000     -0.12105       0.0000       0.0000     
+     195   3958.4       84.271       0.0000     -0.31501E-001  0.0000       0.0000     
+     260   3266.2      -1.7838       0.0000      -4.7399       0.0000       0.0000     
+     261   4393.3       182.42       0.0000      0.60083       0.0000       0.0000     
+     292   8877.5       1529.6       0.0000     -0.14155       0.0000       0.0000     
+     328   6144.9       1154.1       0.0000       1.4725       0.0000       0.0000     
+ 
+ MINIMUM VALUES
+ NODE          2          260            2           16            2            2
+ VALUE    2359.6      -1.7838       0.0000      -26.664       0.0000       0.0000     
+ 
+ MAXIMUM VALUES
+ NODE         16          292            2          328            2            2
+ VALUE    14566.       1529.6       0.0000       1.4725       0.0000       0.0000     
+ 
+ LIST SELECTED COMPONENTS
+ ENTITY TYPE = NODE
+ 
+    NAME                            TYPE      SUBCOMPONENTS
+ 
+  SG1                               NODE
+                                          260 
+  SG2                               NODE
+                                          261 
+  SG3                               NODE
+                                          328 
+  SG4                               NODE
+                                          292 
+  SG5                               NODE
+                                          16  
+  SG6                               NODE
+                                          2   
+  SG7                               NODE
+                                          140 
+  SG8                               NODE
+                                          195 
+
+ NODE NUMBERING KEY =  0
+
+ DISPLAY NODAL SOLUTION,  ITEM=S     COMP=X                 
+
+ Save Graphics image to file A5_Q_N_SX.bmp                                                                                                                                                                                                                                                       
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.2500    
+
+ DISTANCE FOR WINDOW 1   1.105    
+
+ FOCUS POINT FOR WINDOW  1  0.0000      0.0000      0.0000    
+
+ NODE NUMBERING KEY =  1
+
+ DISPLAY NODAL SOLUTION,  ITEM=S     COMP=X                 
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR   0.0  0.3  0.0
+
+ FOCUS POINT FOR WINDOW  1  0.0000     0.33141      0.0000    
+
+ DISPLAY NODAL SOLUTION,  ITEM=S     COMP=X                 
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR   0.0  0.3  0.0
+
+ FOCUS POINT FOR WINDOW  1  0.0000     0.66283      0.0000    
+
+ DISPLAY NODAL SOLUTION,  ITEM=S     COMP=X                 
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR  -0.3  0.0  0.0
+
+ FOCUS POINT FOR WINDOW  1-0.33141     0.66283      0.0000    
+
+ DISPLAY NODAL SOLUTION,  ITEM=S     COMP=X                 
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR   0.3  0.0  0.0
+
+ FOCUS POINT FOR WINDOW  1  0.0000     0.66283      0.0000    
+
+ DISPLAY NODAL SOLUTION,  ITEM=S     COMP=X                 
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR   0.3  0.0  0.0
+
+ FOCUS POINT FOR WINDOW  1 0.33141     0.66283      0.0000    
+
+ DISPLAY NODAL SOLUTION,  ITEM=S     COMP=X                 
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR   0.3  0.0  0.0
+
+ FOCUS POINT FOR WINDOW  1 0.66283     0.66283      0.0000    
+
+ DISPLAY NODAL SOLUTION,  ITEM=S     COMP=X                 
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR   0.3  0.0  0.0
+
+ FOCUS POINT FOR WINDOW  1 0.99424     0.66283      0.0000    
+
+ DISPLAY NODAL SOLUTION,  ITEM=S     COMP=X                 
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR   0.3  0.0  0.0
+
+ FOCUS POINT FOR WINDOW  1  1.3257     0.66283      0.0000    
+
+ DISPLAY NODAL SOLUTION,  ITEM=S     COMP=X                 
+
+ Save Graphics image to file A5_Q_N_SX_zoom.bmp                                                                                                                                                                                                                                                  
+
+ NODE NUMBERING KEY =  0
+
+ DISPLAY ELEMENT SOLUTION,  ITEM=S     COMP=X                 
+
+ Save Graphics image to file A5_Q_E_SX_zoom.bmp                                                                                                                                                                                                                                                  
+
+ AUTOMATIC SCALING FOR WINDOW 1
+    DISTANCE AND FOCUS POINT AUTOMATICALLY CALCULATED
+
+ DISPLAY ELEMENT SOLUTION,  ITEM=S     COMP=X                 
+
+ Save Graphics image to file A5_F_E_SX.bmp                                                                                                                                                                                                                                                       
+
+ ALL SELECT   FOR ITEM=NODE COMPONENT=    
+  IN RANGE         1 TO       4639 STEP          1
+
+       4639  NODES (OF       4639  DEFINED) SELECTED BY NSEL  COMMAND.
+
+ Define Path  Name= FULL_TOP  nPts=    2  nSets=  30  nDiv=  20
+ PPATH  Point=  1  Node=       0  X,Y,Z=  0.000      1.000      0.000     cs=  0
+ PPATH  Point=  2  Node=       0  X,Y,Z=  0.000     0.3750      0.000     cs=  0
+
+ DEFINE PATH IN PATH COORDINATE SYSTEM   0
+  DIRECTION       MAX             MIN 
+     X         0.0000         0.0000    
+     Y         1.0000        0.37500    
+     Z         0.0000         0.0000    
+  TOTAL PATH LENGTH =   0.62500    
+
+
+ DEFINE PATH VARIABLE SX       AS THE NODAL DATA ITEM=S    COMP=X    AVGLAB=    
+  ROTATED INTO COORDINATE SYSTEM  0 AND MOVED TO THE PATH 
+  NUMBER OF PATH VARIABLES DEFINED IS   5
+ SUMMARY OF VARIABLE SX       MAX =    14566.     MIN =    3266.2    
+
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1   3.889    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1   3.593    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1   3.320    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1   3.068    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1   2.835    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1   2.620    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1   2.421    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1   2.237    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1   2.067    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1   1.910    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1   1.765    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1   1.630    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1   1.507    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1   1.392    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR  -0.3  0.0  0.0
+
+ FOCUS POINT FOR WINDOW  1  3.8324     0.50000      0.0000    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR  -0.3  0.0  0.0
+
+ FOCUS POINT FOR WINDOW  1  3.4147     0.50000      0.0000    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR  -0.3  0.0  0.0
+
+ FOCUS POINT FOR WINDOW  1  2.9971     0.50000      0.0000    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR  -0.3  0.0  0.0
+
+ FOCUS POINT FOR WINDOW  1  2.5794     0.50000      0.0000    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR  -0.3  0.0  0.0
+
+ FOCUS POINT FOR WINDOW  1  2.1618     0.50000      0.0000    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR  -0.3  0.0  0.0
+
+ FOCUS POINT FOR WINDOW  1  1.7442     0.50000      0.0000    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR  -0.3  0.0  0.0
+
+ FOCUS POINT FOR WINDOW  1  1.3265     0.50000      0.0000    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR  -0.3  0.0  0.0
+
+ FOCUS POINT FOR WINDOW  1 0.90890     0.50000      0.0000    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR  -0.3  0.0  0.0
+
+ FOCUS POINT FOR WINDOW  1 0.49126     0.50000      0.0000    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1   1.286    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1   1.189    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1   1.098    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1   1.015    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1  0.9378    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1  0.8665    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1  0.8007    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1  0.7398    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1  0.6836    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1  0.6317    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1  0.5837    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1  0.5393    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1  0.4984    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR   0.0  0.3  0.0
+
+ FOCUS POINT FOR WINDOW  1 0.49126     0.64951      0.0000    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR   0.0  0.3  0.0
+
+ FOCUS POINT FOR WINDOW  1 0.49126     0.79902      0.0000    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR   0.0 -0.3  0.0
+
+ FOCUS POINT FOR WINDOW  1 0.49126     0.64951      0.0000    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1  0.4605    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1  0.4255    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR   0.0  0.3  0.0
+
+ FOCUS POINT FOR WINDOW  1 0.49126     0.77716      0.0000    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR   0.0 -0.3  0.0
+
+ FOCUS POINT FOR WINDOW  1 0.49126     0.64951      0.0000    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR  -0.3  0.0  0.0
+
+ FOCUS POINT FOR WINDOW  1 0.36361     0.64951      0.0000    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ FOCUS POINT FOR WINDOW  1 0.40829     0.65334      0.0000    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ FOCUS POINT FOR WINDOW  1 0.40829     0.66100      0.0000    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ Save Graphics image to file A5_Q_CUT_SX.bmp                                                                                                                                                                                                                                                     
+
+ EXIT THE ANSYS POST1 DATABASE PROCESSOR
+
+
+ ***** ROUTINE COMPLETED *****  CP =        24.078
+
+
+
+ *** NOTE ***                            CP =      24.078   TIME= 14:29:12
+ A total of 11 warnings and errors written to                            
+ C:\Users\Christina\file.err.                                            
+
+ SAVE ALL MODEL, SOLUTION AND POST DATA
+
+ *** NOTE ***                            CP =      24.078   TIME= 14:29:12
+ NEW BACKUP FILE NAME= AE6210Assignment5Quad.dbb                         
+ .                                                                       
+
+ ALL CURRENT ANSYS DATA WRITTEN TO FILE NAME= AE6210Assignment5Quad.db 
+  FOR POSSIBLE RESUME FROM THIS POINT
+
+
+ NUMBER OF WARNING MESSAGES ENCOUNTERED=         11
+ NUMBER OF ERROR   MESSAGES ENCOUNTERED=          0
+
++--------------------- A N S Y S   S T A T I S T I C S ------------------------+
+
+Release: Release 19.2       Build: 19.2       Update: UP20180808   Platform: WINDOWS x64 
+Date Run: 02/05/2019   Time: 14:29     Process ID: 1688
+Operating System: Windows 8  (Build: 9200)
+
+Processor Model: Intel(R) Core(TM) i7-6920HQ CPU @ 2.90GHz
+
+Compiler: Intel(R) FORTRAN Compiler Version 17.0.4  (Build: 20170411)
+          Intel(R) C/C++ Compiler Version 17.0.4  (Build: 20170411)
+          Intel(R) Math Kernel Library Version 2017.0.3 Product Build 20170413
+
+Number of machines requested            :    1
+Total number of cores available         :    8
+Number of physical cores available      :    4
+Number of processes requested           :    1
+Number of threads per process requested :    2
+Total number of cores requested         :    2 (Shared Memory Parallel)                    
+
+GPU Acceleration: Not Requested
+
+Job Name: AE6210Assignment5Quad
+Working Directory: C:\Users\Christina
+
+Total CPU time for main thread                    :       18.0 seconds
+Total CPU time summed for all threads             :       24.3 seconds
+
+Elapsed time spent pre-processing model (/PREP7)  :       24.6 seconds
+Elapsed time spent solution - preprocessing       :        0.1 seconds
+Elapsed time spent computing solution             :        1.1 seconds
+Elapsed time spent solution - postprocessing      :        0.0 seconds
+Elapsed time spent post-processing model (/POST1) :     1138.4 seconds
+ 
+Equation solver used                              :            Sparse (symmetric)
+Equation solver computational rate                :        1.4 Gflops
+
+Maximum total memory used                         :      148.0 MB
+Maximum total memory allocated                    :     2112.0 MB
+Total physical memory available                   :         16 GB
+
+Total amount of I/O written to disk               :        0.0 GB
+Total amount of I/O read from disk                :        0.0 GB
+
++------------------ E N D   A N S Y S   S T A T I S T I C S -------------------+
+  manually click file -> copy to output -> X
+
+          8  NODES (OF       4639  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ PLOT LINES FROM     1  TO    35  BY      1
+ 
+ PRINT S    NODAL SOLUTION PER NODE
+ 
+  ***** POST1 NODAL STRESS LISTING *****                                       
+  PowerGraphics Is Currently Enabled                                           
+ 
+  LOAD STEP=     1  SUBSTEP=     1                                             
+   TIME=    1.0000      LOAD CASE=   0                                         
+  NODAL RESULTS ARE FOR MATERIAL   1                                           
+ 
+  THE FOLLOWING X,Y,Z VALUES ARE IN GLOBAL COORDINATES                         
+ 
+    NODE             SX                   SY                   SZ                   SXY                  SYZ                  SXZ  
+  
+       2    2359.60644531        290.545715332        0.00000000000       -1.17980885506        0.00000000000        0.00000000000 
+   
+      16    14566.2890625        3.87542796135        0.00000000000       -26.6635913849        0.00000000000        0.00000000000 
+   
+     140    3666.17187500        301.525024414        0.00000000000      -0.121053978801        0.00000000000        0.00000000000 
+   
+     195    3958.43359375        84.2707977295        0.00000000000      -0.315008834004E-001   0.00000000000        0.00000000000 
+   
+     260    3266.23632812       -1.78377389908        0.00000000000       -4.73988676071        0.00000000000        0.00000000000 
+   
+     261    4393.30957031        182.418487549        0.00000000000       0.600832045078        0.00000000000        0.00000000000 
+   
+     292    8877.52441406        1529.62207031        0.00000000000      -0.141550451517        0.00000000000        0.00000000000 
+   
+     328    6144.87890625        1154.11462402        0.00000000000        1.47252488136        0.00000000000        0.00000000000 
+   
+ 
+ MINIMUM VALUES
+ NODE          2                  260                    2                   16                    2                    2
+ VALUE     2359.60644531       -1.78377389908        0.00000000000       -26.6635913849        0.00000000000        0.00000000000  
+  
+ 
+ MAXIMUM VALUES
+ NODE         16                  292                    2                  328                    2                    2
+ VALUE     14566.2890625        1529.62207031        0.00000000000        1.47252488136        0.00000000000        0.00000000000  
+  
+
+ EXIT THE ANSYS POST1 DATABASE PROCESSOR
+
+
+ ***** ROUTINE COMPLETED *****  CP =        23.094
+
+
+
+ *** NOTE ***                            CP =      23.094   TIME= 16:59:16
+ A total of 11 warnings and errors written to                            
+ C:\Users\Christina\file.err.                                            
+
+ EXIT ANSYS WITHOUT SAVING DATABASE
+
+
+ NUMBER OF WARNING MESSAGES ENCOUNTERED=         11
+ NUMBER OF ERROR   MESSAGES ENCOUNTERED=          0
+
++--------------------- A N S Y S   S T A T I S T I C S ------------------------+
+
+Release: Release 19.2       Build: 19.2       Update: UP20180808   Platform: WINDOWS x64 
+Date Run: 02/05/2019   Time: 16:59     Process ID: 12956
+Operating System: Windows 8  (Build: 9200)
+
+Processor Model: Intel(R) Core(TM) i7-6920HQ CPU @ 2.90GHz
+
+Compiler: Intel(R) FORTRAN Compiler Version 17.0.4  (Build: 20170411)
+          Intel(R) C/C++ Compiler Version 17.0.4  (Build: 20170411)
+          Intel(R) Math Kernel Library Version 2017.0.3 Product Build 20170413
+
+Number of machines requested            :    1
+Total number of cores available         :    8
+Number of physical cores available      :    4
+Number of processes requested           :    1
+Number of threads per process requested :    2
+Total number of cores requested         :    2 (Shared Memory Parallel)                    
+
+GPU Acceleration: Not Requested
+
+Job Name: AE6210Assignment5Quad
+Working Directory: C:\Users\Christina
+
+Total CPU time for main thread                    :       17.3 seconds
+Total CPU time summed for all threads             :       23.4 seconds
+
+Elapsed time spent pre-processing model (/PREP7)  :        5.6 seconds
+Elapsed time spent solution - preprocessing       :        0.1 seconds
+Elapsed time spent computing solution             :        1.2 seconds
+Elapsed time spent solution - postprocessing      :        0.0 seconds
+Elapsed time spent post-processing model (/POST1) :      524.5 seconds
+ 
+Equation solver used                              :            Sparse (symmetric)
+Equation solver computational rate                :        1.2 Gflops
+
+Maximum total memory used                         :      148.0 MB
+Maximum total memory allocated                    :     2112.0 MB
+Total physical memory available                   :         16 GB
+
+Total amount of I/O written to disk               :        0.0 GB
+Total amount of I/O read from disk                :        0.0 GB
+
++------------------ E N D   A N S Y S   S T A T I S T I C S -------------------+
+
+          8  NODES (OF       4639  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ NODE NUMBERING KEY =  0
+
+ DISPLAY NODAL SOLUTION,  ITEM=S     COMP=X                 
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.2500    
+
+ DISTANCE FOR WINDOW 1   1.105    
+
+ FOCUS POINT FOR WINDOW  1  0.0000      0.0000      0.0000    
+
+ NODE NUMBERING KEY =  1
+
+ DISPLAY NODAL SOLUTION,  ITEM=S     COMP=X                 
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR   0.0 -0.3  0.0
+
+ FOCUS POINT FOR WINDOW  1  0.0000    -0.33141      0.0000    
+
+ DISPLAY NODAL SOLUTION,  ITEM=S     COMP=X                 
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR   0.0  0.3  0.0
+
+ FOCUS POINT FOR WINDOW  1  0.0000     0.15752E-16  0.0000    
+
+ DISPLAY NODAL SOLUTION,  ITEM=S     COMP=X                 
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR   0.0  0.3  0.0
+
+ FOCUS POINT FOR WINDOW  1  0.0000     0.33141      0.0000    
+
+ DISPLAY NODAL SOLUTION,  ITEM=S     COMP=X                 
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR   0.0  0.3  0.0
+
+ FOCUS POINT FOR WINDOW  1  0.0000     0.66283      0.0000    
+
+ DISPLAY NODAL SOLUTION,  ITEM=S     COMP=X                 
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR   0.3  0.0  0.0
+
+ FOCUS POINT FOR WINDOW  1 0.33141     0.66283      0.0000    
+
+ DISPLAY NODAL SOLUTION,  ITEM=S     COMP=X                 
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR   0.3  0.0  0.0
+
+ FOCUS POINT FOR WINDOW  1 0.66283     0.66283      0.0000    
+
+ DISPLAY NODAL SOLUTION,  ITEM=S     COMP=X                 
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR   0.3  0.0  0.0
+
+ FOCUS POINT FOR WINDOW  1 0.99424     0.66283      0.0000    
+
+ DISPLAY NODAL SOLUTION,  ITEM=S     COMP=X                 
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR   0.3  0.0  0.0
+
+ FOCUS POINT FOR WINDOW  1  1.3257     0.66283      0.0000    
+
+ DISPLAY NODAL SOLUTION,  ITEM=S     COMP=X                 
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ Define Path  Name= FULL_TOP  nPts=    2  nSets=  30  nDiv=  20
+ PPATH  Point=  1  Node=       0  X,Y,Z=  0.000      1.000      0.000     cs=  0
+ PPATH  Point=  2  Node=       0  X,Y,Z=  0.000     0.3750      0.000     cs=  0
+
+ DEFINE PATH IN PATH COORDINATE SYSTEM   0
+  DIRECTION       MAX             MIN 
+     X         0.0000         0.0000    
+     Y         1.0000        0.37500    
+     Z         0.0000         0.0000    
+  TOTAL PATH LENGTH =   0.62500    
+
+
+ DEFINE PATH VARIABLE SX       AS THE NODAL DATA ITEM=S    COMP=X    AVGLAB=    
+  ROTATED INTO COORDINATE SYSTEM  0 AND MOVED TO THE PATH 
+  NUMBER OF PATH VARIABLES DEFINED IS   5
+ SUMMARY OF VARIABLE SX       MAX =    14566.     MIN =    3266.2    
+
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ WINDOW  1  CHANGED BY /ZOOM
+ NEW FOCUS POINT= 0.903E-01 0.693      0.00       NEW DISTANCE= 0.412    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ TRANSLATE FOCUS POINT FOR WINDOW 1 ALONG SCREEN VECTOR   0.0 -0.3  0.0
+
+ FOCUS POINT FOR WINDOW  1 0.90317E-01 0.56938      0.0000    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1   1.372    
+
+ DISTANCE FOR WINDOW 1  0.5653    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1  0.5224    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1  0.4827    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1  0.4460    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1  0.4121    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ FOCUS POINT FOR WINDOW  1 0.24363     0.59287      0.0000    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ FOCUS POINT FOR WINDOW  1 0.29679     0.59658      0.0000    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ FOCUS POINT FOR WINDOW  1 0.32461     0.61884      0.0000    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ FOCUS POINT FOR WINDOW  1 0.37654     0.65469      0.0000    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ FOCUS POINT FOR WINDOW  1 0.38890     0.65469      0.0000    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ FOCUS POINT FOR WINDOW  1 0.39941     0.65593      0.0000    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ FOCUS POINT FOR WINDOW  1 0.39200     0.66211      0.0000    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ FOCUS POINT FOR WINDOW  1 0.39323     0.66026      0.0000    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1   1.082    
+
+ DISTANCE FOR WINDOW 1  0.4460    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1   1.082    
+
+ DISTANCE FOR WINDOW 1  0.4827    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1  0.4460    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1  0.4121    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1   1.082    
+
+ DISTANCE FOR WINDOW 1  0.4460    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1   1.082    
+
+ DISTANCE FOR WINDOW 1  0.4827    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ DISTANCE MULTIPLIER FOR WINDOW 1  0.9240    
+
+ DISTANCE FOR WINDOW 1  0.4460    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ FOCUS POINT FOR WINDOW  1 0.39992     0.66962      0.0000    
+
+ DISPLAY ALONG PATH DEFINED BY LPATH COMMAND.  DSYS=  0
+
+ Path Display of SX      
+ Scale Factor=  8.0000    
+ Show on NODE Display
+
+ Save Graphics image to file A5_Q_CUT_SX.bmp                                                                                                                                                                                                                                                     
+
+ EXIT THE ANSYS POST1 DATABASE PROCESSOR
+
+
+ ***** ROUTINE COMPLETED *****  CP =        15.469
+
+
+
+ *** NOTE ***                            CP =      15.469   TIME= 16:14:45
+ A total of 5 warnings and errors written to                             
+ C:\Users\Christina\file.err.                                            
+
+ CLEAR DATABASE AND RERUN START.ANS
+
+ RUN SETUP PROCEDURE FROM FILE= C:\Program Files\ANSYS Inc\ANSYS Student\v192\ANSYS\apdl\start.ans
+
+ ANSYS Academic Teaching Introductory              
+
+ /INPUT FILE= C:\Program Files\ANSYS Inc\ANSYS Student\v192\ANSYS\apdl\start.ans  LINE=       0
+
+
+ ***** ROUTINE COMPLETED *****  CP =        15.516
+
+
+
+ *** NOTE ***                            CP =      15.516   TIME= 16:14:45
+ A total of 5 warnings and errors written to                             
+ C:\Users\Christina\file.err.                                            
+
+ Current working directory switched to C:\Users\Christina\Box\1-W18-AE6210-Applied Finite Elements\Assignments\A5                                                                                                                                                                              
+
+ CURRENT JOBNAME REDEFINED AS AE6210Assignment5Full
+
+ TITLE= 
+  AE6210 Assignment 5 Full                                                     
+
+
+ PARAMETER E_LENGTH =     14.00000000    
+
+ PARAMETER E_WIDTH =     2.000000000    
+
+ PARAMETER E_LEFT =     5.500000000    
+
+ PARAMETER E_RIGHT =     8.500000000    
+
+ PARAMETER E_THICKNESS =    0.2500000000    
+
+ PARAMETER E_YM =     10100.00000    
+
+ PARAMETER E_PR =    0.3300000000    
+
+ PARAMETER C_DIAMETER =    0.7500000000    
+
+ PARAMETER SG1Y =     1.000000000    
+
+ PARAMETER SG2Y =    0.8790000000    
+
+ PARAMETER SG3Y =    0.6270000000    
+
+ PARAMETER SG4Y =    0.4730000000    
+
+ PARAMETER SG5Y =    0.3750000000    
+
+ PARAMETER SG6X =    0.8750000000    
+
+ PARAMETER SG7X =     1.625000000    
+
+ PARAMETER SG8X =     2.375000000    
+
+ PARAMETER P_FORCE =     2000.000000    
+
+ PARAMETER T_STRESS =     4000.000000    
+
+ PARAMETER MESH_ARC =    0.1250000000    
+
+ PARAMETER MESH_SM =    0.2500000000    
+
+ PARAMETER MESH_MED =    0.5000000000    
+
+ PARAMETER MESH_LG =     1.000000000    
+
+ RED=100% GREEN=100% BLUE=100%
+  for color index  0.
+
+ RED=80% GREEN=80% BLUE=80%
+  for color index 13.
+
+ RED=60% GREEN=60% BLUE=60%
+  for color index 14.
+
+ RED=0% GREEN=0% BLUE=0%
+  for color index 15.
+
+ CHARACTERS IN INTEGER FIELD    =   7
+ OUTPUT DISPLAY TYPE            =   G 
+ CHARACTERS PER OUTPUT FIELD    =  21
+ SIGNIFICANT DIGITS             =  12
+ LINES PER PAGE                 =  20
+ CHARACTERS PER LINE            = 256
+
+          ***** ANSYS ANALYSIS DEFINITION (PREP7) *****
+
+ ENTER  /SHOW,DEVICE-NAME  TO ENABLE GRAPHIC DISPLAY
+ ENTER  FINISH             TO LEAVE PREP7
+ PRINTOUT KEY SET TO /GOPR (USE /NOPR TO SUPPRESS)
+
+ ELEMENT TYPE       1 IS PLANE183     2-D 8-NODE PLANE STRS SOLID 
+  KEYOPT( 1- 6)=        0      0      0        0      0      0
+  KEYOPT( 7-12)=        0      0      0        0      0      0
+  KEYOPT(13-18)=        0      0      0        0      0      0
+
+ CURRENT NODAL DOF SET IS  UX    UY  
+  TWO-DIMENSIONAL MODEL
+
+ ELEMENT TYPE       1 IS PLANE183     2-D 6-NODE PLANE STRS SOLID 
+  KEYOPT( 1- 6)=        1      0      0        0      0      0
+  KEYOPT( 7-12)=        0      0      0        0      0      0
+  KEYOPT(13-18)=        0      0      0        0      0      0
+
+ CURRENT NODAL DOF SET IS  UX    UY  
+  TWO-DIMENSIONAL MODEL
+
+ ELEMENT TYPE       1 IS PLANE183     2-D 6-NODE PLANE STRS SOLID 
+  KEYOPT( 1- 6)=        1      0      3        0      0      0
+  KEYOPT( 7-12)=        0      0      0        0      0      0
+  KEYOPT(13-18)=        0      0      0        0      0      0
+
+ CURRENT NODAL DOF SET IS  UX    UY  
+  TWO-DIMENSIONAL MODEL
+
+ REAL CONSTANT SET          1  ITEMS   1 TO   6
+   0.25000       0.0000       0.0000       0.0000       0.0000       0.0000    
+
+ MATERIAL          1     EX   =   10100.00      
+
+ MATERIAL          1     PRXY =  0.3300000      
+
+ CREATE A PLANAR RECTANGULAR AREA WITH
+ X-DISTANCES FROM     -5.500000000     TO      8.500000000    
+ Y-DISTANCES FROM     -1.000000000     TO      1.000000000    
+
+      OUTPUT AREA =     1
+
+ PLOT AREAS FROM     1  TO     1  BY      1
+
+ CREATE A CIRCULAR AREA WITH
+ INNER RADIUS         =      0.000000000    
+ OUTER RADIUS         =     0.3750000000    
+ STARTING THETA ANGLE =      0.000000000    
+ ENDING   THETA ANGLE =      360.0000000    
+      OUTPUT AREA =     2
+
+ SUBTRACT AREAS
+
+      AREA NUMBERS TO BE OPERATED ON =       1
+      AREAS OPERATED ON WILL BE DELETED IF POSSIBLE
+      AREA NUMBERS TO BE SUBTRACTED  =       2
+      AREAS SUBTRACTED WILL BE DELETED IF POSSIBLE
+      OUTPUT AREAS =     3
+
+ KEYPOINT     10   X,Y,Z=   0.00000       0.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     11   X,Y,Z=   0.00000       1.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     30   X,Y,Z=   8.50000       0.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     31   X,Y,Z=  -5.50000       0.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     12   X,Y,Z=  -5.50000       1.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     13   X,Y,Z=   8.50000       1.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     14   X,Y,Z=  -5.50000      0.879000       0.00000      IN CSYS=  0
+
+ KEYPOINT     15   X,Y,Z=   8.50000      0.879000       0.00000      IN CSYS=  0
+
+ KEYPOINT     16   X,Y,Z=  -5.50000      0.627000       0.00000      IN CSYS=  0
+
+ KEYPOINT     17   X,Y,Z=   8.50000      0.627000       0.00000      IN CSYS=  0
+
+ KEYPOINT     18   X,Y,Z=  -5.50000      0.473000       0.00000      IN CSYS=  0
+
+ KEYPOINT     19   X,Y,Z=   8.50000      0.473000       0.00000      IN CSYS=  0
+
+ KEYPOINT     20   X,Y,Z=  -5.50000      0.375000       0.00000      IN CSYS=  0
+
+ KEYPOINT     21   X,Y,Z=   8.50000      0.375000       0.00000      IN CSYS=  0
+
+ KEYPOINT     22   X,Y,Z=  0.875000      -1.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     23   X,Y,Z=  0.875000       1.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     24   X,Y,Z=   1.62500      -1.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     25   X,Y,Z=   1.62500       1.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     26   X,Y,Z=   2.37500      -1.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     27   X,Y,Z=   2.37500       1.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     28   X,Y,Z=   3.56250      -1.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     29   X,Y,Z=   3.56250       1.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     32   X,Y,Z= -0.875000      -1.00000       0.00000      IN CSYS=  0
+
+ KEYPOINT     33   X,Y,Z= -0.875000       1.00000       0.00000      IN CSYS=  0
+
+ LINE CONNECTS KEYPOINTS     10    11
+  LINE NO.=     9  KP1=     10  TAN1=    0.0000  -1.0000   0.0000
+                   KP2=     11  TAN2=    0.0000   1.0000   0.0000
+
+ LINE CONNECTS KEYPOINTS     30    31
+  LINE NO.=    10  KP1=     30  TAN1=    1.0000   0.0000   0.0000
+                   KP2=     31  TAN2=   -1.0000   0.0000   0.0000
+
+ LINE CONNECTS KEYPOINTS     12    13
+  LINE NO.=    11  KP1=     12  TAN1=   -1.0000   0.0000   0.0000
+                   KP2=     13  TAN2=    1.0000   0.0000   0.0000
+
+ LINE CONNECTS KEYPOINTS     14    15
+  LINE NO.=    12  KP1=     14  TAN1=   -1.0000   0.0000   0.0000
+                   KP2=     15  TAN2=    1.0000   0.0000   0.0000
+
+ LINE CONNECTS KEYPOINTS     16    17
+  LINE NO.=    13  KP1=     16  TAN1=   -1.0000   0.0000   0.0000
+                   KP2=     17  TAN2=    1.0000   0.0000   0.0000
+
+ LINE CONNECTS KEYPOINTS     18    19
+  LINE NO.=    14  KP1=     18  TAN1=   -1.0000   0.0000   0.0000
+                   KP2=     19  TAN2=    1.0000   0.0000   0.0000
+
+ LINE CONNECTS KEYPOINTS     20    21
+  LINE NO.=    15  KP1=     20  TAN1=   -1.0000   0.0000   0.0000
+                   KP2=     21  TAN2=    1.0000   0.0000   0.0000
+
+ LINE CONNECTS KEYPOINTS     22    23
+  LINE NO.=    16  KP1=     22  TAN1=    0.0000  -1.0000   0.0000
+                   KP2=     23  TAN2=    0.0000   1.0000   0.0000
+
+ LINE CONNECTS KEYPOINTS     24    25
+  LINE NO.=    17  KP1=     24  TAN1=    0.0000  -1.0000   0.0000
+                   KP2=     25  TAN2=    0.0000   1.0000   0.0000
+
+ LINE CONNECTS KEYPOINTS     26    27
+  LINE NO.=    18  KP1=     26  TAN1=    0.0000  -1.0000   0.0000
+                   KP2=     27  TAN2=    0.0000   1.0000   0.0000
+
+ LINE CONNECTS KEYPOINTS     28    29
+  LINE NO.=    19  KP1=     28  TAN1=    0.0000  -1.0000   0.0000
+                   KP2=     29  TAN2=    0.0000   1.0000   0.0000
+
+ LINE CONNECTS KEYPOINTS     32    33
+  LINE NO.=    20  KP1=     32  TAN1=    0.0000  -1.0000   0.0000
+                   KP2=     33  TAN2=    0.0000   1.0000   0.0000
+
+ NODE NUMBERING KEY =  1
+
+ LINE NUMBERING KEY =  1
+
+ AREA NUMBERING KEY =  1
+
+ PLOT LINES FROM     1  TO    20  BY      1
+
+ SELECT       FOR ITEM=LINE COMPONENT=    
+  IN RANGE        16 TO         20 STEP          1
+
+        5  LINES (OF       20  DEFINED) SELECTED BY LSEL  COMMAND.
+
+ ALSO SELECT  FOR ITEM=LINE COMPONENT=    
+  IN RANGE        10 TO         10 STEP          1
+
+        6  LINES (OF       20  DEFINED) SELECTED BY LSEL COMMAND.
+
+ SUBTRACT A LINE FROM AN AREA
+      AREA NUMBERS TO BE OPERATED ON =       3
+      AREAS OPERATED ON WILL BE DELETED IF POSSIBLE
+      LINE NUMBERS TO BE SUBTRACTED  =      10     16     17     18     19
+      LINE NUMBERS TO BE SUBTRACTED  =      20
+      LINES SUBTRACTED WILL BE DELETED IF POSSIBLE
+      OUTPUT AREAS =     1    2    4    5    6    7    8    9   10   11
+      OUTPUT AREAS =    12   13
+
+ SELECT       FOR ITEM=LINE COMPONENT=    
+  IN RANGE        11 TO         15 STEP          1
+
+        5  LINES (OF       43  DEFINED) SELECTED BY LSEL  COMMAND.
+
+ SUBTRACT A LINE FROM AN AREA
+      AREA NUMBERS TO BE OPERATED ON =      12
+      AREAS OPERATED ON WILL BE DELETED IF POSSIBLE
+      LINE NUMBERS TO BE SUBTRACTED  =      11     12     13     14     15
+      LINES SUBTRACTED WILL BE DELETED IF POSSIBLE
+      OUTPUT AREAS =     3   14   15   16   17   18
+
+ PLOT LINES FROM     1  TO    58  BY      1
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ PLOT AREAS FROM     1  TO    18  BY      1
+
+ SELECT       FOR ITEM=AREA COMPONENT=    
+  IN RANGE         1 TO          2 STEP          1
+
+        2  AREAS (OF       17  DEFINED) SELECTED BY  ASEL  COMMAND.
+
+ ALSO SELECT  FOR ITEM=AREA COMPONENT=    
+  IN RANGE         4 TO          5 STEP          1
+
+        4  AREAS (OF       17  DEFINED) SELECTED BY ASEL  COMMAND.
+
+ AT ALL SELECTED AREAS,
+    SET DESIRED ELEMENT EDGE LENGTH TO  1.0000    
+
+ SELECT       FOR ITEM=AREA COMPONENT=    
+  IN RANGE         6 TO         11 STEP          1
+
+        6  AREAS (OF       17  DEFINED) SELECTED BY  ASEL  COMMAND.
+
+ ALSO SELECT  FOR ITEM=AREA COMPONENT=    
+  IN RANGE        13 TO         13 STEP          1
+
+        7  AREAS (OF       17  DEFINED) SELECTED BY ASEL  COMMAND.
+
+ AT ALL SELECTED AREAS,
+    SET DESIRED ELEMENT EDGE LENGTH TO 0.50000    
+
+ SELECT       FOR ITEM=AREA COMPONENT=    
+  IN RANGE        15 TO         17 STEP          1
+
+        3  AREAS (OF       17  DEFINED) SELECTED BY  ASEL  COMMAND.
+
+ AT ALL SELECTED AREAS,
+    SET DESIRED ELEMENT EDGE LENGTH TO 0.25000    
+
+ ALL SELECT   FOR ITEM=AREA COMPONENT=    
+  IN RANGE         1 TO         18 STEP          1
+
+       17  AREAS (OF       17  DEFINED) SELECTED BY ASEL COMMAND.
+
+ AT AREA     3,
+    SET DESIRED ELEMENT EDGE LENGTH TO 0.12500    
+
+ AT AREA    14,
+    SET DESIRED ELEMENT EDGE LENGTH TO 0.12500    
+
+ AT AREA    18,
+    SET DESIRED ELEMENT EDGE LENGTH TO 0.12500    
+
+ GENERATE NODES AND ELEMENTS   IN  ALL  SELECTED AREAS    
+                                                                         
+ ** Meshing of area 1 in progress **                                     
+    ** AREA     1 MESHED WITH        0 QUADRILATERALS,       17 TRIANGLES **
+ ** Meshing of area 1 completed ** 17 elements.                          
+                                                                         
+ ** Meshing of area 2 in progress **                                     
+    ** AREA     2 MESHED WITH        0 QUADRILATERALS,       17 TRIANGLES **
+ ** Meshing of area 2 completed ** 17 elements.                          
+                                                                         
+ ** Meshing of area 3 in progress **                                     
+    ** AREA     3 MESHED WITH        0 QUADRILATERALS,       35 TRIANGLES **
+ ** Meshing of area 3 completed ** 35 elements.                          
+                                                                         
+ ** Meshing of area 4 in progress **                                     
+    ** AREA     4 MESHED WITH        0 QUADRILATERALS,       15 TRIANGLES **
+ ** Meshing of area 4 completed ** 15 elements.                          
+                                                                         
+ ** Meshing of area 5 in progress **                                     
+    ** AREA     5 MESHED WITH        0 QUADRILATERALS,       31 TRIANGLES **
+ ** Meshing of area 5 completed ** 31 elements.                          
+                                                                         
+ ** Meshing of area 6 in progress **                                     
+    ** AREA     6 MESHED WITH        0 QUADRILATERALS,       14 TRIANGLES **
+ ** Meshing of area 6 completed ** 14 elements.                          
+                                                                         
+ ** Meshing of area 7 in progress **                                     
+    ** AREA     7 MESHED WITH        0 QUADRILATERALS,       24 TRIANGLES **
+ ** Meshing of area 7 completed ** 24 elements.                          
+                                                                         
+ ** Meshing of area 8 in progress **                                     
+    ** AREA     8 MESHED WITH        0 QUADRILATERALS,       14 TRIANGLES **
+ ** Meshing of area 8 completed ** 14 elements.                          
+                                                                         
+ ** Meshing of area 9 in progress **                                     
+    ** AREA     9 MESHED WITH        0 QUADRILATERALS,       14 TRIANGLES **
+ ** Meshing of area 9 completed ** 14 elements.                          
+                                                                         
+ ** Meshing of area 10 in progress **                                    
+    ** AREA    10 MESHED WITH        0 QUADRILATERALS,       18 TRIANGLES **
+ ** Meshing of area 10 completed ** 18 elements.                         
+                                                                         
+ ** Meshing of area 11 in progress **                                    
+    ** AREA    11 MESHED WITH        0 QUADRILATERALS,       18 TRIANGLES **
+ ** Meshing of area 11 completed ** 18 elements.                         
+                                                                         
+ ** Meshing of area 13 in progress **                                    
+    ** AREA    13 MESHED WITH        0 QUADRILATERALS,       30 TRIANGLES **
+ ** Meshing of area 13 completed ** 30 elements.                         
+                                                                         
+ ** Meshing of area 14 in progress **                                    
+    ** AREA    14 MESHED WITH        0 QUADRILATERALS,       35 TRIANGLES **
+ ** Meshing of area 14 completed ** 35 elements.                         
+                                                                         
+ ** Meshing of area 15 in progress **                                    
+    ** AREA    15 MESHED WITH        0 QUADRILATERALS,       18 TRIANGLES **
+ ** Meshing of area 15 completed ** 18 elements.                         
+                                                                         
+ ** Meshing of area 16 in progress **                                    
+    ** AREA    16 MESHED WITH        0 QUADRILATERALS,       20 TRIANGLES **
+ ** Meshing of area 16 completed ** 20 elements.                         
+                                                                         
+ ** Meshing of area 17 in progress **                                    
+    ** AREA    17 MESHED WITH        0 QUADRILATERALS,       25 TRIANGLES **
+ ** Meshing of area 17 completed ** 25 elements.                         
+                                                                         
+ ** Meshing of area 18 in progress **                                    
+    ** AREA    18 MESHED WITH        0 QUADRILATERALS,       32 TRIANGLES **
+ ** Meshing of area 18 completed ** 32 elements.                         
+
+ NUMBER OF AREAS MESHED     =         17
+ MAXIMUM NODE NUMBER        =        817
+ MAXIMUM ELEMENT NUMBER     =        377
+
+ ------------------------------------------------------------------------------
+            <<<<<<          SHAPE TESTING SUMMARY           >>>>>>
+            <<<<<<       FOR NEW OR MODIFIED ELEMENTS       >>>>>>
+ ------------------------------------------------------------------------------
+                    --------------------------------------
+                    |  Element count       377 PLANE183  |
+                    --------------------------------------
+
+  Test                Number tested  Warning count  Error count    Warn+Err %
+  ----                -------------  -------------  -----------    ----------
+  Aspect Ratio                377              0             0         0.00 %
+  Maximum Angle               377              0             0         0.00 %
+  Jacobian Ratio              377              2             0         0.53 %
+
+  Any                         377              2             0         0.53 %
+ ------------------------------------------------------------------------------
+
+ *** WARNING ***                         CP =      17.812   TIME= 16:14:48
+ Shape testing revealed that 2 of the 377 new or modified elements       
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ PRODUCE ELEMENT PLOT IN DSYS =   0
+
+ SWITCH ERROR MESSAGES FOR ELEMENT SHAPE LIMIT VIOLATIONS TO WARNINGS
+
+   REFINE ELEMENTS   ON  ALL  SELECTED AREAS    
+
+ Additional Nodes    =    2269
+ Additional Elements =    1103
+
+ ------------------------------------------------------------------------------
+            <<<<<<          SHAPE TESTING SUMMARY           >>>>>>
+            <<<<<<       FOR NEW OR MODIFIED ELEMENTS       >>>>>>
+ ------------------------------------------------------------------------------
+                    --------------------------------------
+                    |  Element count      1480 PLANE183  |
+                    --------------------------------------
+
+  Test                Number tested  Warning count  Error count    Warn+Err %
+  ----                -------------  -------------  -----------    ----------
+  Aspect Ratio               1480              0             0         0.00 %
+  Maximum Angle              1480              0             0         0.00 %
+  Jacobian Ratio             1480              2             0         0.14 %
+
+  Any                        1480              2             0         0.14 %
+ ------------------------------------------------------------------------------
+
+ *** WARNING ***                         CP =      18.266   TIME= 16:14:48
+ Shape testing revealed that 2 of the 1480 new or modified elements      
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ PRODUCE ELEMENT PLOT IN DSYS =   0
+
+ SELECT       FOR ITEM=AREA COMPONENT=    
+  IN RANGE         6 TO         13 STEP          1
+
+        7  AREAS (OF       17  DEFINED) SELECTED BY  ASEL  COMMAND.
+
+ ALSO SELECT  FOR ITEM=AREA COMPONENT=    
+  IN RANGE         3 TO          3 STEP          1
+
+        8  AREAS (OF       17  DEFINED) SELECTED BY ASEL  COMMAND.
+
+   REFINE ELEMENTS   ON  ALL  SELECTED AREAS    
+
+ Additional Nodes    =    5194
+ Additional Elements =    2564
+
+ ------------------------------------------------------------------------------
+            <<<<<<          SHAPE TESTING SUMMARY           >>>>>>
+            <<<<<<       FOR NEW OR MODIFIED ELEMENTS       >>>>>>
+ ------------------------------------------------------------------------------
+                    --------------------------------------
+                    |  Element count      4044 PLANE183  |
+                    --------------------------------------
+
+  Test                Number tested  Warning count  Error count    Warn+Err %
+  ----                -------------  -------------  -----------    ----------
+  Aspect Ratio               4044              4             0         0.10 %
+  Maximum Angle              4044              0             0         0.00 %
+  Jacobian Ratio             4044              2             0         0.05 %
+
+  Any                        4044              4             0         0.10 %
+ ------------------------------------------------------------------------------
+
+ *** WARNING ***                         CP =      18.812   TIME= 16:14:49
+ Shape testing revealed that 4 of the 4044 new or modified elements      
+ violate shape warning limits.  To review test results, please see the   
+ output file or issue the CHECK command.                                 
+
+ PRODUCE ELEMENT PLOT IN DSYS =   0
+
+ ALL SELECT   FOR ITEM=AREA COMPONENT=    
+  IN RANGE         1 TO         18 STEP          1
+
+       17  AREAS (OF       17  DEFINED) SELECTED BY ASEL COMMAND.
+
+ SELECT       FOR ITEM=NODE COMPONENT=    
+  IN RANGE      1308 TO       1308 STEP          1
+
+          1  NODES (OF       8280  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ DEFINITION OF COMPONENT = SG1       ENTITY=NODE
+
+ ALL SELECT   FOR ITEM=NODE COMPONENT=    
+  IN RANGE         1 TO       8280 STEP          1
+
+       8280  NODES (OF       8280  DEFINED) SELECTED BY NSEL  COMMAND.
+
+ SELECT       FOR ITEM=NODE COMPONENT=    
+  IN RANGE      1209 TO       1209 STEP          1
+
+          1  NODES (OF       8280  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ DEFINITION OF COMPONENT = SG2       ENTITY=NODE
+
+ ALL SELECT   FOR ITEM=NODE COMPONENT=    
+  IN RANGE         1 TO       8280 STEP          1
+
+       8280  NODES (OF       8280  DEFINED) SELECTED BY NSEL  COMMAND.
+
+ SELECT       FOR ITEM=NODE COMPONENT=    
+  IN RANGE      1105 TO       1105 STEP          1
+
+          1  NODES (OF       8280  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ DEFINITION OF COMPONENT = SG3       ENTITY=NODE
+
+ ALL SELECT   FOR ITEM=NODE COMPONENT=    
+  IN RANGE         1 TO       8280 STEP          1
+
+       8280  NODES (OF       8280  DEFINED) SELECTED BY NSEL  COMMAND.
+
+ SELECT       FOR ITEM=NODE COMPONENT=    
+  IN RANGE       826 TO        826 STEP          1
+
+          1  NODES (OF       8280  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ DEFINITION OF COMPONENT = SG4       ENTITY=NODE
+
+ ALL SELECT   FOR ITEM=NODE COMPONENT=    
+  IN RANGE         1 TO       8280 STEP          1
+
+       8280  NODES (OF       8280  DEFINED) SELECTED BY NSEL  COMMAND.
+
+ SELECT       FOR ITEM=NODE COMPONENT=    
+  IN RANGE        98 TO         98 STEP          1
+
+          1  NODES (OF       8280  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ DEFINITION OF COMPONENT = SG5       ENTITY=NODE
+
+ ALL SELECT   FOR ITEM=NODE COMPONENT=    
+  IN RANGE         1 TO       8280 STEP          1
+
+       8280  NODES (OF       8280  DEFINED) SELECTED BY NSEL  COMMAND.
+
+ DEFINITION OF COMPONENT = SG1_5                           
+ SUB-COMPONENTS=SG1                             SG2                             
+ SUB-COMPONENTS=SG3                             SG4                             
+ SUB-COMPONENTS=SG5                             
+
+ SELECT       FOR ITEM=NODE COMPONENT=    
+  IN RANGE       108 TO        108 STEP          1
+
+          1  NODES (OF       8280  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ DEFINITION OF COMPONENT = SG6       ENTITY=NODE
+
+ ALL SELECT   FOR ITEM=NODE COMPONENT=    
+  IN RANGE         1 TO       8280 STEP          1
+
+       8280  NODES (OF       8280  DEFINED) SELECTED BY NSEL  COMMAND.
+
+ SELECT       FOR ITEM=NODE COMPONENT=    
+  IN RANGE       296 TO        296 STEP          1
+
+          1  NODES (OF       8280  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ DEFINITION OF COMPONENT = SG7       ENTITY=NODE
+
+ ALL SELECT   FOR ITEM=NODE COMPONENT=    
+  IN RANGE         1 TO       8280 STEP          1
+
+       8280  NODES (OF       8280  DEFINED) SELECTED BY NSEL  COMMAND.
+
+ SELECT       FOR ITEM=NODE COMPONENT=    
+  IN RANGE       383 TO        383 STEP          1
+
+          1  NODES (OF       8280  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ DEFINITION OF COMPONENT = SG8       ENTITY=NODE
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+ DEFINITION OF COMPONENT = SGALL                           
+ SUB-COMPONENTS=SG1                             SG2                             
+ SUB-COMPONENTS=SG3                             SG4                             
+ SUB-COMPONENTS=SG5                             SG6                             
+ SUB-COMPONENTS=SG7                             SG8                             
+
+ NODE NUMBERING KEY =  0
+
+ PRODUCE ELEMENT PLOT IN DSYS =   0
+
+ Save Graphics image to file A5_F_E_MESH.bmp                                                                                                                                                                                                                                                     
+
+ SELECT       FOR ITEM=LOC  COMPONENT=X     BETWEEN -5.5000     AND  -5.5000    
+   KABS=  0.  TOLERANCE= 0.275000E-01
+
+        2  LINES (OF       51  DEFINED) SELECTED BY LSEL  COMMAND.
+
+ CONSTRAINT AT ALL SELECTED LINES
+      LOAD LABELS = UX  
+      VALUES =      0.0000         0.0000    
+
+ ALL BOUNDARY CONDITION DISPLAY KEYS SET TO  1
+
+ SELECT       FOR ITEM=LOC  COMPONENT=X     BETWEEN -5.5000     AND  -5.5000    
+   KABS=  0.  TOLERANCE= 0.275000E-01
+
+          9  NODES (OF       8280  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ RESELECT     FOR ITEM=LOC  COMPONENT=Y     BETWEEN  0.0000     AND   0.0000    
+   KABS=  0.  TOLERANCE= 0.100000E-05
+
+          1  NODES (OF       8280  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ SPECIFIED CONSTRAINT UX   FOR SELECTED NODES            1 TO        8280 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+ ADDITIONAL DOFS=  UY  
+
+ *** WARNING ***                         CP =      21.094   TIME= 16:14:50
+ Both solid model and finite element model boundary conditions have been 
+ applied to this model.  As solid loads are transferred to the nodes or  
+ elements, they can overwrite directly applied loads.                    
+
+ SELECT       FOR ITEM=LOC  COMPONENT=X     BETWEEN  8.5000     AND   8.5000    
+   KABS=  0.  TOLERANCE= 0.425000E-01
+
+          9  NODES (OF       8280  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ RESELECT     FOR ITEM=LOC  COMPONENT=Y     BETWEEN  0.0000     AND   0.0000    
+   KABS=  0.  TOLERANCE= 0.100000E-05
+
+          1  NODES (OF       8280  DEFINED) SELECTED BY  NSEL  COMMAND.
+
+ SPECIFIED CONSTRAINT UY   FOR SELECTED NODES            1 TO        8280 BY           1
+ REAL=  0.00000000       IMAG=  0.00000000    
+
+ ALL SELECT   FOR ITEM=LINE COMPONENT=    
+  IN RANGE         1 TO         58 STEP          1
+
+       51  LINES (OF       51  DEFINED) SELECTED BY LSEL COMMAND.
+
+ SELECT       FOR ITEM=LOC  COMPONENT=X     BETWEEN  8.5000     AND   8.5000    
+   KABS=  0.  TOLERANCE= 0.425000E-01
+
+        2  LINES (OF       51  DEFINED) SELECTED BY LSEL  COMMAND.
+
+ SURFACE LOAD ON ALL SELECTED LINES 
+     LOAD LABEL = PRES
+     VALI,  VALJ  =         -4000.0             -4000.0    
+
+ PRES LOAD SURFACE DISPLAY KEY =  1
+
+ SELECT ALL ENTITIES OF TYPE= ALL  AND BELOW
+
+
+ ***** ROUTINE COMPLETED *****  CP =        21.797
+
+
+
+ *** NOTE ***                            CP =      21.797   TIME= 16:14:50
+ A total of 9 warnings and errors written to                             
+ C:\Users\Christina\file.err.                                            
+
+ *****  ANSYS SOLUTION ROUTINE  *****
+
+ *****  ANSYS SOLVE    COMMAND  *****
+
+ TRANSFER SOLID MODEL BOUNDARY CONDITIONS TO FINITE ELEMENT MODEL
+      CONSTRAINTS    TRANSFERRED FROM LINES         =     10
+      SURFACE LOADS  TRANSFERRED FROM LINES         =      4
+
+ *** WARNING ***                         CP =      21.891   TIME= 16:14:50
+ Element shape errors, if any, are currently shown as warnings only.     
+ Issue SHPP,ON to restore shape error traps, if desired.                 
+
+ *** WARNING ***                         CP =      21.891   TIME= 16:14:50
+ Previous testing revealed that 4 of the 4044 selected elements violate  
+ shape warning limits.  To review warning messages, please see the       
+ output or error file, or issue the CHECK command.                       
+
+ *** NOTE ***                            CP =      21.891   TIME= 16:14:50
+ The model data was checked and warning messages were found.             
+  Please review output or errors file ( C:\Users\Christina\file.err )    
+ for these warning messages.                                             
+
+ *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
+                ---GIVE SUGGESTIONS ONLY---
+
+ ELEMENT TYPE    1 IS PLANE183 WITH PLANE STRESS OPTION. NO SUGGESTION IS
+ AVAILABLE.
+
+
+
+                       S O L U T I O N   O P T I O N S
+
+   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .2-D                  
+   DEGREES OF FREEDOM. . . . . . UX   UY  
+   ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
+   GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC  
+
+ *** NOTE ***                            CP =      21.906   TIME= 16:14:50
+ Present time 0 is less than or equal to the previous time.  Time will   
+ default to 1.                                                           
+
+ *** NOTE ***                            CP =      21.906   TIME= 16:14:50
+ The conditions for direct assembly have been met.  No .emat or .erot    
+ files will be produced.                                                 
+
+                      L O A D   S T E P   O P T I O N S
+
+   LOAD STEP NUMBER. . . . . . . . . . . . . . . .     1
+   TIME AT END OF THE LOAD STEP. . . . . . . . . .  1.0000    
+   NUMBER OF SUBSTEPS. . . . . . . . . . . . . . .     1
+   STEP CHANGE BOUNDARY CONDITIONS . . . . . . . .    NO
+   PRINT OUTPUT CONTROLS . . . . . . . . . . . . .NO PRINTOUT
+   DATABASE OUTPUT CONTROLS. . . . . . . . . . . .ALL DATA WRITTEN
+                                                  FOR THE LAST SUBSTEP
+
+
+ SOLUTION MONITORING INFO IS WRITTEN TO FILE= AE6210Assignment5Full.mntr                                                                                                                                                                                                                                          
+
+ Element Formation Element= 1000 Cum.  Iter.= 1 CP= 22.094               
+  Time= 1.0000 Load Step= 1 Substep= 1 Equilibrium Iteration= 1.         
+
+ Range of element maximum matrix coefficients in global coordinates
+ Maximum = 266773.036 at element 3957.                                   
+ Minimum = 4370.45338 at element 3720.                                   
+
+   *** ELEMENT MATRIX FORMULATION TIMES
+     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
+
+        1      4044  PLANE183      0.188   0.000046
+ Time at end of element matrix formulation CP = 22.1875.                 
+
+ SPARSE MATRIX DIRECT SOLVER.
+  Number of equations =       16549,    Maximum wavefront =     42
+  Memory allocated for solver              =    19.963 MB
+  Memory required for in-core solution     =    19.245 MB
+  Memory required for out-of-core solution =    10.021 MB
+
+ *** NOTE ***                            CP =      22.438   TIME= 16:14:51
+ The Sparse Matrix Solver is currently running in the in-core memory     
+ mode.  This memory mode uses the most amount of memory in order to      
+ avoid using the hard drive as much as possible, which most often        
+ results in the fastest solution time.  This mode is recommended if      
+ enough physical memory is present to accommodate all of the solver      
+ data.                                                                   
+ curEqn=  16549  totEqn=  16549 Job CP sec=     22.500
+      Factor Done= 100% Factor Wall sec=      0.000 rate=       0.0 Mflops
+ Sparse solver maximum pivot= 266716.465 at node 571 UY.                 
+ Sparse solver minimum pivot= 52.4336879 at node 6358 UY.                
+ Sparse solver minimum pivot in absolute value= 52.4336879 at node 6358  
+ UY.                                                                     
+
+   *** ELEMENT RESULT CALCULATION TIMES
+     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
+
+        1      4044  PLANE183      0.219   0.000054
+
+   *** NODAL LOAD CALCULATION TIMES
+     TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
+
+        1      4044  PLANE183      0.000   0.000000
+ *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
+ *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
+
+ *** NOTE ***                            CP =      22.812   TIME= 16:14:51
+ Solution is done!                                                       
+
+
+ *** ANSYS BINARY FILE STATISTICS
+  BUFFER SIZE USED= 16384
+        3.188 MB WRITTEN ON ASSEMBLED MATRIX FILE: AE6210Assignment5Full.full
+        3.875 MB WRITTEN ON RESULTS FILE: AE6210Assignment5Full.rst
+
+ FINISH SOLUTION PROCESSING
+
+
+ ***** ROUTINE COMPLETED *****  CP =        23.141
+
+
+
+ *** NOTE ***                            CP =      23.141   TIME= 16:14:51
+ A total of 11 warnings and errors written to                            
+ C:\Users\Christina\file.err.                                            
+
+          ***** ANSYS RESULTS INTERPRETATION (POST1) *****
+
+ ENTER  /SHOW,DEVICE-NAME  TO ENABLE GRAPHIC DISPLAY
+ ENTER  FINISH             TO LEAVE POST1
+
+ /OUTPUT FILE= Full_data.txt

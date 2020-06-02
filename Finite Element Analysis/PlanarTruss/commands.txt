@@ -1,0 +1,89 @@
+/clear
+/com, Database cleared for a fresh start
+
+/cwd,'C:\Users\ANSYS\Truss'
+/filname, Assignment3
+/title, AE6210 Assignment 3
+
+! define parameters
+l_area = 4,				! 2inx2in = 4in^2
+l_elasticity = 30000,	! ksi
+l_v = 0.25,				! no unit
+x1 = 0,					! in
+x2 = 100,				! in
+y1 = 0,					! in
+y2 = 100,				! in
+y3 = 200,				! in
+f1 = 50,				! kips
+
+
+/com, Start Preprocessing Steps
+/PREP7
+
+et, 1, link180					! sets element 1 type to Link 180
+SECTYPE, 1, LINK, , 2x2,		! adds name and type to the section of element 1
+SECDATA, l_area					! adds area to the section
+
+! setting material properties for material 1
+MP,EX,1,l_elasticity			! Young's Modulus
+MP,PRXY,1,l_v					! Poisson's ratio
+
+! creating nodes using parameters
+n,1,x1,y1,0,
+n,2,x1,y2,0,
+n,3,x1,y3,0,
+n,4,x2,y3,0,
+n,5,x2,y2,0,
+n,6,x2,y1,0,
+
+! add elements defined by a number between the nodes provided
+en,1,1,2,
+en,2,2,3,
+en,3,3,4,
+en,4,2,5,
+en,5,1,6,
+en,6,4,5,
+en,7,5,6,
+en,8,2,4,
+en,9,1,5,
+
+! modify plot to show everything
+/PNUM,NODE,1,		! turns on numbering for nodes
+/PNUM,ELEM,1,		! turns on numbering for elemenmts
+eplot				! show elements on the plot
+
+! define displacement at nodes
+d,1,ux,0,,,,uy,
+d,6,uy,0,
+
+! define forces at nodes using parameters
+f,1,fx,f1,,3,				! from node 1 to node 3 apply force of f1 along fx
+
+
+/com, Start Solution Steps
+/SOLU
+
+SOLVE,				! solves for Current LS
+
+/OUTPUT,data,txt,,append		! defines where output data should be saved
+
+/com, Start Post Processing Steps
+/POST1
+
+/com, reverse video color
+/RGB,INDEX,100,100,100,0,
+/RGB,INDEX,80,80,80,13,
+/RGB,INDEX,60,60,60,14,
+/RGB,INDEX,0,0,0,15,
+
+PLDISP,1				! plots the deformed shape, option 1 shows both deformed and undeformed
+/IMAGE,save,displacement,png	! save display to image file
+
+PRNSOL,U,COMP,				! prints solution for structural displacement (u) and has X,Y,Z and vector sum (comp)
+/com, manually click file -> copy to output -> X
+
+
+ETABLE,Force,SMISC, 1,          ! create table element for Force
+ETABLE,Stress,LS, 1,            ! create table element for Stress
+PRETAB,FORCE,STRESS             ! print a table with Force and Stress
+/com, manually click file -> copy to output -> X
