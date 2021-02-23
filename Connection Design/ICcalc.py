@@ -1,5 +1,4 @@
 # Determining the Weld Instantaneous Center
-import csv
 import math as m
 import statistics as s
 
@@ -195,31 +194,3 @@ def iterate(params):
 results = iterate(params)
 data = results[0]
 params = results[1]
-
-
-# # saving the final set of data to a CSV file
-# with open('sleep.csv', 'w', newline='') as csvfile:
-#     labels = ['number', 'orientation', 'size', 'x', 'y', 'r', 'theta_r', 'delta_max',
-#               'delta_ult', 'deltas_u_r', 'delta_int', 'p', 'R', 'R_x', 'R_y', 'R-r'
-#               ]
-#     dw = csv.DictWriter(csvfile, fieldnames=labels, dialect='excel')
-#     dw.writeheader()
-
-#     for d in data:
-#         dw.writerow({'number': data[d]['number'], 'orientation': data[d]['orientation'],
-#                     'size': data[d]['size'], 'x': data[d]['x'], 'y': data[d]['y'],
-#                     'r': data[d]['r'], 'theta_r': data[d]['theta_r'],
-#                     'delta_max': data[d]['delta_max'], 'delta_ult': data[d]['delta_ult'],
-#                     'deltas_u_r': data[d]['delta_u_r'], 'delta_int': data[d]['delta_int'],
-#                     'p': data[d]['p'], 'R': data[d]['R'], 'R_x': data[d]['R_x'],
-#                     'R_y': data[d]['R_y'], 'R-r': data[d]['R-r']
-#                     })
-
-# # writing appending a line to the csv file each time the program is run
-# with open('new.csv', 'a+', newline='') as csvfile:
-#     pLabels = ['sgmt_size', 'precision', 'IC_x', 'Pnf', 'Pnm', 'percent_diff', 'iterations']
-#     dw = csv.DictWriter(csvfile, fieldnames=pLabels, dialect='excel')
-#     # dw.writeheader
-#     dw.writerow({'sgmt_size': params['sgmt_size'], 'precision': params['precision'],
-#                 'IC_x': params['IC_x'], 'Pnf': params['Pnf'], 'Pnm': params['Pnm'],
-#                 'percent_diff': params['Pnf']/params['Pnm']})

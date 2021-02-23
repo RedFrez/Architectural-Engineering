@@ -2,7 +2,11 @@ function [kel,T] = fkel(E,A,I,L,Lx,Ly,hi,hj)
     % This makes the local frame 6x6 esm, and 6x6 transformation matrix 
     
     % preliminaries: dimensions, angles, and element properties
-    EAoL = E*A/L; EIoL = E*I/L; EIoL2 = E*I/L^2; EIoL3 = E*I/L^3; % saving space below
+    EAoL = E*A/L; 
+    EIoL = E*I/L; 
+    EIoL2 = E*I/L^2; 
+    EIoL3 = E*I/L^3; 
+    % saving space below
     %
     % set up a blank for the 6x6 keL 
     kel = zeros(6); % 6 = Number dof

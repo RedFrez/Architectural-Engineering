@@ -1,5 +1,5 @@
 function [Q, D, q]  = ESMScript(Tp, props, Q, D, doffree, dofspec)
-    
+
     % ***CORE OF ANALYSIS***
     K = zeros(Tp.Ndof,Tp.Ndof);
     for iel = 1:Tp.Nelems

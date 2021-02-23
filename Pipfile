@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+streamlit = "==0.75.0"
+pandas = "==1.2.0"
+numpy = "==1.19.0"
+plotly = "==4.13"
+sympy = "==1.7.1"
+tabulate = "==0.8.7"
+matplotlib = "==3.3.3"
+pytexit = "==0.3.3"
+watchdog = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"

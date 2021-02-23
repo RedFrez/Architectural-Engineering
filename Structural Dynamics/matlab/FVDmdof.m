@@ -49,7 +49,7 @@ for n = 1:modes
     end
     % calculate the absolute max for q to use later
     mode(n).qmax = max(abs(mode(n).q));
-end
+endw
 %
 % loop through modes to convert back to u for each
 % need to use all the q values so must be done as a separate loop

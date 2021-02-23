@@ -7,9 +7,7 @@ import pandas as pd
 # import set of HSS to be tested
 data = pd.read_csv("roundhss.csv")
 
-# Base Num
-#
-# bers not problem specific
+# Base Numbers not problem specific
 in2ft = 1/12
 ft2in = 12
 mphi=.9

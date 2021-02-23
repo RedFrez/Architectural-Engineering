@@ -8,4 +8,4 @@ require iterations to find the best solution.
 
 [Script for finding the best Round HSS for specific use case](RoundHSSCalc.py)
 
-[Script for finding the Instantaneous Center of Rotation for a Strait Weld Group](ICcalc.py)
+[Script for finding the Instantaneous Center of Rotation for a Straight Weld Group](ICcalc.py)
